@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   Align = alTop
   Caption = 'Form1'
-  ClientHeight = 859
-  ClientWidth = 1282
+  ClientHeight = 629
+  ClientWidth = 1029
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,10 +15,11 @@ object Form1: TForm1
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1282
+    Width = 1029
     Height = 121
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 721
     object Label1: TLabel
       Left = 40
       Top = 24
@@ -68,11 +69,13 @@ object Form1: TForm1
   object PageControl1: TPageControl
     Left = 0
     Top = 121
-    Width = 1282
-    Height = 738
-    ActivePage = TabSheet1
+    Width = 1029
+    Height = 508
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 1282
+    ExplicitHeight = 738
     object TabSheet1: TTabSheet
       Caption = 'Dados Pessoais'
       object Label2: TLabel
@@ -174,7 +177,7 @@ object Form1: TForm1
         Caption = 'Celular'
       end
       object Edit1: TEdit
-        Left = 23
+        Left = 24
         Top = 61
         Width = 177
         Height = 23
@@ -268,10 +271,116 @@ object Form1: TForm1
         Height = 23
         TabOrder = 12
       end
+      object CheckBox1: TCheckBox
+        Left = 536
+        Top = 303
+        Width = 113
+        Height = 20
+        Caption = 'Cliente Inativo'
+        TabOrder = 13
+      end
     end
     object TabSheet2: TTabSheet
       Caption = 'Dados do C'#244'njuge'
       ImageIndex = 1
+      object Label6: TLabel
+        Left = 32
+        Top = 48
+        Width = 96
+        Height = 15
+        Caption = 'Nome do conjuge'
+      end
+      object Label9: TLabel
+        Left = 32
+        Top = 112
+        Width = 102
+        Height = 15
+        Caption = 'Data de Nacimento'
+      end
+      object Label16: TLabel
+        Left = 464
+        Top = 48
+        Width = 21
+        Height = 15
+        Caption = 'CPF'
+      end
+      object Edit13: TEdit
+        Left = 32
+        Top = 69
+        Width = 345
+        Height = 23
+        TabOrder = 0
+      end
+      object GroupBox1: TGroupBox
+        Left = 464
+        Top = 141
+        Width = 505
+        Height = 265
+        Caption = 'Contatos do C'#244'njuge'
+        TabOrder = 1
+        object Label17: TLabel
+          Left = 21
+          Top = 64
+          Width = 37
+          Height = 15
+          Caption = 'Celular'
+        end
+        object Label20: TLabel
+          Left = 21
+          Top = 189
+          Width = 34
+          Height = 15
+          Caption = 'E-mail'
+        end
+        object Label21: TLabel
+          Left = 261
+          Top = 61
+          Width = 56
+          Height = 15
+          Caption = 'Operadora'
+        end
+        object Edit17: TEdit
+          Left = 21
+          Top = 210
+          Width = 422
+          Height = 23
+          TabOrder = 0
+        end
+        object Edit16: TEdit
+          Left = 21
+          Top = 85
+          Width = 177
+          Height = 23
+          TabOrder = 1
+        end
+        object ComboBox2: TComboBox
+          Left = 261
+          Top = 85
+          Width = 144
+          Height = 23
+          Style = csDropDownList
+          TabOrder = 2
+          Items.Strings = (
+            'Tim '
+            'Claro'
+            'Vivo'
+            'Oi')
+        end
+      end
+      object Edit14: TEdit
+        Left = 464
+        Top = 69
+        Width = 177
+        Height = 23
+        TabOrder = 2
+      end
+      object Edit15: TEdit
+        Left = 32
+        Top = 133
+        Width = 201
+        Height = 23
+        TabOrder = 3
+      end
     end
     object TabSheet3: TTabSheet
       Caption = 'Dados do Trabalho'

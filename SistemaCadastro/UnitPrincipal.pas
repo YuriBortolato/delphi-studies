@@ -46,6 +46,20 @@ type
     Label19: TLabel;
     Edit12: TEdit;
     Edit11: TEdit;
+    CheckBox1: TCheckBox;
+    Label6: TLabel;
+    Edit13: TEdit;
+    GroupBox1: TGroupBox;
+    Label9: TLabel;
+    Label16: TLabel;
+    Edit14: TEdit;
+    Edit15: TEdit;
+    Label17: TLabel;
+    Label20: TLabel;
+    Edit17: TEdit;
+    Edit16: TEdit;
+    Label21: TLabel;
+    ComboBox2: TComboBox;
   private
     { Private declarations }
   public
