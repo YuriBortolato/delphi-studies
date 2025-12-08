@@ -60,6 +60,29 @@ type
     Edit16: TEdit;
     Label21: TLabel;
     ComboBox2: TComboBox;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Edit18: TEdit;
+    Edit19: TEdit;
+    Edit20: TEdit;
+    Edit21: TEdit;
+    Edit22: TEdit;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    Edit23: TEdit;
+    Label29: TLabel;
+    Edit24: TEdit;
+    Label30: TLabel;
+    Edit25: TEdit;
+    Edit26: TEdit;
+    Edit27: TEdit;
+    Label31: TLabel;
+    Label33: TLabel;
+    Label32: TLabel;
+    Memo1: TMemo;
   private
     { Private declarations }
   public
@@ -72,5 +95,4 @@ var
 implementation
 
 {$R *.dfm}
-
 end.
