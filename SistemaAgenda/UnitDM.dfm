@@ -13,6 +13,7 @@ object DM: TDM
   end
   object tbContatos: TFDTable
     Active = True
+    AfterInsert = tbContatosAfterInsert
     IndexFieldNames = 'id'
     Connection = Conexao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
@@ -22,34 +23,35 @@ object DM: TDM
     object tbContatosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = False
     end
     object tbContatosnome: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'nome'
       Origin = 'nome'
-      Required = True
       Size = 50
     end
     object tbContatoscelular: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'celular'
       Origin = 'celular'
-      Required = True
       Size = 16
     end
     object tbContatosbloqueado: TBooleanField
+      AutoGenerateValue = arDefault
       FieldName = 'bloqueado'
       Origin = 'bloqueado'
-      Required = True
     end
     object tbContatosdata: TDateField
+      AutoGenerateValue = arDefault
       FieldName = 'data'
       Origin = 'data'
-      Required = True
     end
     object tbContatosobservacao: TMemoField
+      AutoGenerateValue = arDefault
       FieldName = 'observacao'
       Origin = 'observacao'
-      Required = True
       BlobType = ftMemo
     end
   end

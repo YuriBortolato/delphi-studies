@@ -21,6 +21,7 @@ type
     tbContatosbloqueado: TBooleanField;
     tbContatosdata: TDateField;
     tbContatosobservacao: TMemoField;
+    procedure tbContatosAfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -35,5 +36,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDM.tbContatosAfterInsert(DataSet: TDataSet);
+begin
+ tbContatosdata.Value := Now();
+end;
 
 end.
