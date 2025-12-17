@@ -8,7 +8,7 @@ uses
   Winapi.CommCtrl, Vcl.Buttons;
 
 type
-  TForm1 = class(TForm)
+  TFormPrincipal = class(TForm)
     MainMenu1: TMainMenu;
     Sistema1: TMenuItem;
     Sair1: TMenuItem;
@@ -19,6 +19,11 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     Image1: TImage;
+    procedure Sair1Click(Sender: TObject);
+    procedure Pacientes1Click(Sender: TObject);
+    procedure Agendamentos1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,10 +31,37 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormPrincipal: TFormPrincipal;
 
 implementation
 
 {$R *.dfm}
+
+uses UnitCadPacientes, UnitAgendamentos;
+
+procedure TFormPrincipal.Agendamentos1Click(Sender: TObject);
+begin
+    FormCadAgendamentos.ShowModal;
+end;
+
+procedure TFormPrincipal.BitBtn1Click(Sender: TObject);
+begin
+     FormCadAgendamentos.ShowModal;
+end;
+
+procedure TFormPrincipal.BitBtn2Click(Sender: TObject);
+begin
+     FormCadPacientes.ShowModal;
+end;
+
+procedure TFormPrincipal.Pacientes1Click(Sender: TObject);
+begin
+       FormCadPacientes.ShowModal;
+end;
+
+procedure TFormPrincipal.Sair1Click(Sender: TObject);
+begin
+     Application.Terminate;
+end;
 
 end.
