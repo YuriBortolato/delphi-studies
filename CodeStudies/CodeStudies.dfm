@@ -18,16 +18,16 @@ object Form1: TForm1
     Height = 15
     Caption = 'Digite seu nome: '
   end
-  object lblResultado: TLabel
+  object Label2: TLabel
     Left = 56
-    Top = 152
-    Width = 105
+    Top = 112
+    Width = 90
     Height = 15
-    Caption = '_____________________'
+    Caption = 'Digite sua idade: '
   end
   object Button1: TButton
     Left = 168
-    Top = 104
+    Top = 184
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -40,5 +40,12 @@ object Form1: TForm1
     Width = 187
     Height = 23
     TabOrder = 1
+  end
+  object txtIdade: TEdit
+    Left = 56
+    Top = 133
+    Width = 187
+    Height = 23
+    TabOrder = 2
   end
 end

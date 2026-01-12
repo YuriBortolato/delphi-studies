@@ -11,7 +11,8 @@ type
     Label1: TLabel;
     Button1: TButton;
     txtNome: TEdit;
-    lblResultado: TLabel;
+    txtIdade: TEdit;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -30,8 +31,20 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
     if txtNome.Text = '' then
       begin
-        ShowMessage('Digite seu nome');
+           ShowMessage('Preencha o nome');
       end;
+
+      if txtIdade.Text = '' then
+      begin
+          ShowMessage('Preencha a idade');
+      end;
+
+      if (txtNome.Text <> '' ) and (txtIdade.Text <> '' ) then
+      begin
+        ShowMessage('Cadastro preencido com sucesso!!');
+      end;
+
+
 end;
 
 end.
