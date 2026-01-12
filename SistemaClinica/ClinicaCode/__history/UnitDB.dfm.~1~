@@ -1,0 +1,26 @@
+object DataModule1: TDataModule1
+  Height = 574
+  Width = 1019
+  object FDConnection1: TFDConnection
+    Left = 128
+    Top = 104
+  end
+  object FDTable1: TFDTable
+    Connection = FDConnection1
+    Left = 280
+    Top = 104
+  end
+  object FDTable2: TFDTable
+    Connection = FDConnection1
+    Left = 416
+    Top = 104
+  end
+  object DataSource1: TDataSource
+    Left = 280
+    Top = 208
+  end
+  object DataSource2: TDataSource
+    Left = 416
+    Top = 208
+  end
+end

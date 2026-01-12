@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/12/05 09:34:00.000.069,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/11 13:16:50.000.942,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/11 13:17:24.000.053,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/11 13:30:56.000.250,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\UnitPrincipal.pas</Transaction>
+    <Transaction>2025/12/11 13:30:56.000.250,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\UnitPrincipal.dfm</Transaction>
+    <Transaction>2025/12/11 13:31:15.000.322,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\Agenda.dproj</Transaction>
+    <Transaction>2025/12/11 13:33:58.000.941,=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\Unit1.pas</Transaction>
+    <Transaction>2025/12/11 14:16:33.000.092,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\Unit1.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\UnitDM.dfm</Transaction>
+    <Transaction>2025/12/11 14:16:33.000.092,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\Unit1.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaAgenda\UnitDM.pas</Transaction>
+  </Transactions>
+</BorlandProject>
