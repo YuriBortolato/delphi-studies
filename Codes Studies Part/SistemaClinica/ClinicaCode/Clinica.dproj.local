@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/12/05 09:34:00.000.069,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/11 13:16:50.000.942,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/16 08:07:53.000.732,=C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/16 08:18:27.000.330,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitPrincipal.dfm</Transaction>
+    <Transaction>2025/12/16 08:18:27.000.330,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitPrincipal.pas</Transaction>
+    <Transaction>2025/12/16 08:18:35.000.211,C:\Users\notebookSuporte\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Clinica.dproj</Transaction>
+    <Transaction>2025/12/17 09:50:43.000.672,=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit2.pas</Transaction>
+    <Transaction>2025/12/17 09:51:22.000.898,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit2.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitCadPacientes.dfm</Transaction>
+    <Transaction>2025/12/17 09:51:22.000.898,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit2.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitCadPacientes.pas</Transaction>
+    <Transaction>2025/12/17 09:51:30.000.071,=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit3.pas</Transaction>
+    <Transaction>2025/12/17 09:52:10.000.968,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit3.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitAgendamentos.pas</Transaction>
+    <Transaction>2025/12/17 09:52:10.000.968,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\Unit3.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\UnitAgendamentos.dfm</Transaction>
+    <Transaction>2025/12/19 09:51:27.000.404,=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\ClinicaCode\Unit1.pas</Transaction>
+    <Transaction>2025/12/19 09:59:20.000.073,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\ClinicaCode\UnitDB.pas=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\ClinicaCode\Unit1.pas</Transaction>
+    <Transaction>2025/12/19 09:59:20.000.073,C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\ClinicaCode\UnitDB.dfm=C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\SistemaClinica\ClinicaCode\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
