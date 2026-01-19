@@ -25,36 +25,22 @@ type
     pnlRowGerenceRep: TPanel;
     pnlRowTerminal: TPanel;
     lblTotal: TLabel;
-    chkMesaEBalcao: TCheckBox;
-    chkEntrega: TCheckBox;
-    chkFiscal: TCheckBox;
-    chkGerencePlus: TCheckBox;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
     chkWhatsapp: TCheckBox;
-    chkComeraqui: TCheckBox;
-    chkFinanceiro: TCheckBox;
-    chkDre: TCheckBox;
-    chkDashboard: TCheckBox;
-    chkIfood: TCheckBox;
-    chkAiqfome: TCheckBox;
-    chkDeliveryDireto: TCheckBox;
-    chkGerenceRep: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    CheckBox8: TCheckBox;
+    CheckBox9: TCheckBox;
+    CheckBox10: TCheckBox;
+    CheckBox11: TCheckBox;
+    CheckBox12: TCheckBox;
+    CheckBox13: TCheckBox;
     Label1: TLabel;
     pnlTituloModulos: TPanel;
     Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
-    Label13: TLabel;
-    Label14: TLabel;
-    Label15: TLabel;
-    procedure chkEntregaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,9 +53,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TForm1.chkEntregaClick(Sender: TObject);
-begi
-end;
 
 end.

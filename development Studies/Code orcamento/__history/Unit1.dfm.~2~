@@ -24,7 +24,7 @@ object Form1: TForm1
     TabOrder = 0
     ExplicitWidth = 934
     object lblTotal: TLabel
-      Left = 362
+      Left = 2
       Top = 18
       Width = 199
       Height = 45
@@ -46,7 +46,8 @@ object Form1: TForm1
     VertScrollBar.Tracking = True
     Align = alClient
     TabOrder = 1
-    ExplicitTop = 106
+    ExplicitWidth = 934
+    ExplicitHeight = 713
     object pnlRowMesa: TPanel
       Left = 0
       Top = 41
@@ -54,33 +55,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowMesaEBalcao'
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 3
-      ExplicitTop = 35
-      object Label3: TLabel
-        Left = 600
-        Top = 19
-        Width = 43
-        Height = 15
-        Caption = 'R$ 17,00'
-        Layout = tlCenter
-      end
-      object chkMesaEBalcao: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 14
-        Width = 145
-        Height = 20
-        Margins.Left = 20
-        Caption = 'Mesa e Balc'#227'o'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
+      ExplicitWidth = 930
+      object CheckBox1: TCheckBox
+        Left = 552
+        Top = 17
+        Width = 97
+        Height = 17
+        Caption = 'CheckBox1'
         TabOrder = 0
       end
     end
@@ -91,34 +76,18 @@ object Form1: TForm1
       Height = 41
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowEntrega'
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 930
-      object Label4: TLabel
-        Left = 600
-        Top = 24
-        Width = 43
-        Height = 15
-        Caption = 'R$ 17,00'
-        Layout = tlCenter
-      end
-      object chkEntrega: TCheckBox
-        AlignWithMargins = True
-        Left = 312
+      object CheckBox2: TCheckBox
+        Left = 552
         Top = 18
         Width = 97
-        Height = 20
-        Margins.Left = 20
-        Caption = 'Entrega'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
+        Height = 17
+        Caption = 'CheckBox2'
         TabOrder = 0
-        OnClick = chkEntregaClick
       end
     end
     object pnlRowFiscal: TPanel
@@ -128,26 +97,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowFiscal'
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
       ExplicitWidth = 930
-      object Label5: TLabel
-        Left = 600
-        Top = 16
-        Width = 43
-        Height = 15
-        Caption = 'R$ 47,00'
-        Layout = tlCenter
-      end
-      object chkFiscal: TCheckBox
-        AlignWithMargins = True
-        Left = 312
+      object CheckBox3: TCheckBox
+        Left = 552
         Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Fiscal'
+        Caption = 'CheckBox3'
         TabOrder = 0
       end
     end
@@ -158,26 +118,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowGerencePlus'
       Color = clWhite
       ParentBackground = False
       TabOrder = 3
       ExplicitWidth = 930
-      object Label6: TLabel
-        Left = 600
-        Top = 19
-        Width = 43
-        Height = 15
-        Caption = 'R$ 47,00'
-        Layout = tlCenter
-      end
-      object chkGerencePlus: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 17
+      object CheckBox4: TCheckBox
+        Left = 552
+        Top = 6
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Gerence Plus'
+        Caption = 'CheckBox4'
         TabOrder = 0
       end
     end
@@ -188,26 +139,29 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowWhatsapp'
       Color = clWhite
       ParentBackground = False
       TabOrder = 4
       ExplicitWidth = 930
       object Label1: TLabel
         Left = 600
-        Top = 19
+        Top = 16
         Width = 43
         Height = 15
         Caption = 'R$ 47,00'
         Layout = tlCenter
       end
       object chkWhatsapp: TCheckBox
-        AlignWithMargins = True
-        Left = 312
+        Left = 304
         Top = -7
         Width = 89
         Height = 55
-        Margins.Left = 20
-        Caption = 'Whatsapp'
+        Margins.Left = 70
+        Margins.Top = 70
+        Margins.Right = 70
+        Margins.Bottom = 70
+        Caption = 'WHATSAPP'
         TabOrder = 0
       end
     end
@@ -218,26 +172,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowComeraqui'
       Color = clWhite
       ParentBackground = False
       TabOrder = 5
       ExplicitWidth = 930
-      object Label7: TLabel
-        Left = 600
-        Top = 16
-        Width = 43
-        Height = 15
-        Caption = 'R$ 47,00'
-        Layout = tlCenter
-      end
-      object chkComeraqui: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      object CheckBox6: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Comeraqui'
+        Caption = 'CheckBox6'
         TabOrder = 0
       end
     end
@@ -248,26 +193,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowFinanceiro'
       Color = clWhite
       ParentBackground = False
       TabOrder = 6
-      ExplicitLeft = 3
-      object Label8: TLabel
-        Left = 600
-        Top = 16
-        Width = 43
-        Height = 15
-        Caption = 'R$ 27,00'
-        Layout = tlCenter
-      end
-      object chkFinanceiro: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      ExplicitWidth = 930
+      object CheckBox7: TCheckBox
+        Left = 552
+        Top = 24
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Financeiro'
+        Caption = 'CheckBox7'
         TabOrder = 0
       end
     end
@@ -278,27 +214,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowDre'
       Color = clWhite
       ParentBackground = False
       TabOrder = 7
-      ExplicitLeft = -3
-      ExplicitTop = 323
-      object Label9: TLabel
-        Left = 600
-        Top = 24
-        Width = 43
-        Height = 15
-        Caption = 'R$ 27,00'
-        Layout = tlCenter
-      end
-      object chkDre: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      ExplicitWidth = 930
+      object CheckBox8: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'DRE'
+        Caption = 'CheckBox8'
         TabOrder = 0
       end
     end
@@ -309,26 +235,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowDashboard'
       Color = clWhite
       ParentBackground = False
       TabOrder = 8
       ExplicitWidth = 930
-      object Label10: TLabel
-        Left = 600
-        Top = 19
-        Width = 43
-        Height = 15
-        Caption = 'R$ 27,00'
-        Layout = tlCenter
-      end
-      object chkDashboard: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      object CheckBox9: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Dashboard'
+        Caption = 'CheckBox9'
         TabOrder = 0
       end
     end
@@ -339,26 +256,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowIfood'
       Color = clWhite
       ParentBackground = False
       TabOrder = 9
       ExplicitWidth = 930
-      object Label11: TLabel
-        Left = 600
-        Top = 16
-        Width = 43
-        Height = 15
-        Caption = 'R$ 27,00'
-        Layout = tlCenter
-      end
-      object chkIfood: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      object CheckBox10: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Ifood'
+        Caption = 'CheckBox10'
         TabOrder = 0
       end
     end
@@ -369,26 +277,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowAiqfome'
       Color = clWhite
       ParentBackground = False
       TabOrder = 10
       ExplicitWidth = 930
-      object Label12: TLabel
-        Left = 600
-        Top = 8
-        Width = 43
-        Height = 15
-        Caption = 'R$ 27,00'
-        Layout = tlCenter
-      end
-      object chkAiqfome: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      object CheckBox11: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'Aiqfome'
+        Caption = 'CheckBox11'
         TabOrder = 0
       end
     end
@@ -399,27 +298,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowDeliveryDireto'
       Color = clWhite
       ParentBackground = False
       TabOrder = 11
-      ExplicitLeft = 3
-      ExplicitTop = 484
-      object Label13: TLabel
-        Left = 600
-        Top = 6
-        Width = 43
-        Height = 15
-        Caption = 'R$ 17,00'
-        Layout = tlCenter
-      end
-      object chkDeliveryDireto: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      ExplicitWidth = 930
+      object CheckBox12: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'DeliveryDireto'
+        Caption = 'CheckBox12'
         TabOrder = 0
       end
     end
@@ -430,26 +319,17 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowGerenceRep'
       Color = clWhite
       ParentBackground = False
       TabOrder = 12
       ExplicitWidth = 930
-      object Label14: TLabel
-        Left = 600
-        Top = 8
-        Width = 43
-        Height = 15
-        Caption = 'R$ 47,00'
-        Layout = tlCenter
-      end
-      object chkGerenceRep: TCheckBox
-        AlignWithMargins = True
-        Left = 312
-        Top = 6
+      object CheckBox13: TCheckBox
+        Left = 552
+        Top = 17
         Width = 97
         Height = 17
-        Margins.Left = 20
-        Caption = 'GerenceRep'
+        Caption = 'CheckBox13'
         TabOrder = 0
       end
     end
@@ -460,17 +340,11 @@ object Form1: TForm1
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      Caption = 'pnlRowTerminal'
       Color = clWhite
       ParentBackground = False
       TabOrder = 13
-      ExplicitTop = 568
-      object Label15: TLabel
-        Left = 344
-        Top = 6
-        Width = 46
-        Height = 15
-        Caption = 'Terminal'
-      end
+      ExplicitWidth = 930
     end
     object pnlTituloModulos: TPanel
       Left = 0
