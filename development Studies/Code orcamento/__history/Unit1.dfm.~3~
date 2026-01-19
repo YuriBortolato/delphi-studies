@@ -26,10 +26,10 @@ object Form1: TForm1
     object lblTotal: TLabel
       Left = 362
       Top = 18
-      Width = 235
+      Width = 199
       Height = 45
       Alignment = taCenter
-      Caption = 'R$ 127,00 | m'#234's'
+      Caption = 'R$ 0,00 | m'#234's'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -32
@@ -58,27 +58,21 @@ object Form1: TForm1
       ParentBackground = False
       TabOrder = 0
       ExplicitLeft = 3
-      ExplicitTop = 45
+      ExplicitTop = 35
       object Label3: TLabel
         Left = 600
         Top = 19
-        Width = 70
-        Height = 25
+        Width = 43
+        Height = 15
         Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkMesaEBalcao: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 6
-        Width = 201
-        Height = 40
+        Left = 312
+        Top = 14
+        Width = 145
+        Height = 20
         Margins.Left = 20
         Caption = 'Mesa e Balc'#227'o'
         Font.Charset = DEFAULT_CHARSET
@@ -100,28 +94,21 @@ object Form1: TForm1
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 3
-      ExplicitTop = 84
+      ExplicitWidth = 930
       object Label4: TLabel
         Left = 600
-        Top = 10
-        Width = 70
-        Height = 25
+        Top = 24
+        Width = 43
+        Height = 15
         Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkEntrega: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 247
-        Height = 35
+        Left = 312
+        Top = 18
+        Width = 97
+        Height = 20
         Margins.Left = 20
         Caption = 'Entrega'
         Font.Charset = DEFAULT_CHARSET
@@ -147,32 +134,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label5: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 16
+        Width = 43
+        Height = 15
         Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkFiscal: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 247
-        Height = 40
+        Left = 312
+        Top = 17
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Fiscal'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -189,32 +164,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label6: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 19
+        Width = 43
+        Height = 15
         Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkGerencePlus: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 3
-        Width = 247
-        Height = 47
+        Left = 312
+        Top = 17
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Gerence Plus'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -231,32 +194,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label1: TLabel
         Left = 600
-        Top = 10
-        Width = 70
-        Height = 25
+        Top = 19
+        Width = 43
+        Height = 15
         Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkWhatsapp: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 145
-        Height = 50
+        Left = 312
+        Top = -7
+        Width = 89
+        Height = 55
         Margins.Left = 20
         Caption = 'Whatsapp'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -273,32 +224,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label7: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 16
+        Width = 43
+        Height = 15
         Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkComeraqui: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 201
-        Height = 47
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Comeraqui'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -315,32 +254,20 @@ object Form1: TForm1
       ExplicitLeft = 3
       object Label8: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 16
+        Width = 43
+        Height = 15
         Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkFinanceiro: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 201
-        Height = 40
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Financeiro'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -358,32 +285,20 @@ object Form1: TForm1
       ExplicitTop = 323
       object Label9: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 24
+        Width = 43
+        Height = 15
         Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkDre: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 177
-        Height = 40
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'DRE'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -400,32 +315,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label10: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 19
+        Width = 43
+        Height = 15
         Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkDashboard: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 145
-        Height = 42
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Dashboard'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -442,32 +345,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label11: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 16
+        Width = 43
+        Height = 15
         Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkIfood: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
+        Left = 312
+        Top = 6
         Width = 97
-        Height = 34
+        Height = 17
         Margins.Left = 20
         Caption = 'Ifood'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -484,32 +375,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label12: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 8
+        Width = 43
+        Height = 15
         Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkAiqfome: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 129
-        Height = 40
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'Aiqfome'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -527,32 +406,20 @@ object Form1: TForm1
       ExplicitTop = 484
       object Label13: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 6
+        Width = 43
+        Height = 15
         Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkDeliveryDireto: TCheckBox
         AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 177
-        Height = 40
+        Left = 312
+        Top = 6
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'DeliveryDireto'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -569,32 +436,20 @@ object Form1: TForm1
       ExplicitWidth = 930
       object Label14: TLabel
         Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
+        Top = 8
+        Width = 43
+        Height = 15
         Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         Layout = tlCenter
       end
       object chkGerenceRep: TCheckBox
         AlignWithMargins = True
-        Left = 288
+        Left = 312
         Top = 6
-        Width = 145
-        Height = 34
+        Width = 97
+        Height = 17
         Margins.Left = 20
         Caption = 'GerenceRep'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
         TabOrder = 0
       end
     end
@@ -606,81 +461,15 @@ object Form1: TForm1
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Segoe UI'
-      Font.Style = []
       ParentBackground = False
-      ParentFont = False
       TabOrder = 13
-      ExplicitLeft = 3
+      ExplicitTop = 568
       object Label15: TLabel
-        Left = 382
+        Left = 344
         Top = 6
-        Width = 72
-        Height = 25
+        Width = 46
+        Height = 15
         Caption = 'Terminal'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lblQtdTerminais: TLabel
-        Left = 320
-        Top = 6
-        Width = 10
-        Height = 25
-        Caption = '3'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label16: TLabel
-        Left = 590
-        Top = 6
-        Width = 80
-        Height = 25
-        Caption = 'R$ 127,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Button1: TButton
-        Left = 288
-        Top = 6
-        Width = 20
-        Height = 20
-        Caption = '-'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-      end
-      object Button2: TButton
-        Left = 348
-        Top = 6
-        Width = 20
-        Height = 20
-        Caption = '+'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
       end
     end
     object pnlTituloModulos: TPanel
@@ -695,10 +484,10 @@ object Form1: TForm1
       TabOrder = 14
       ExplicitWidth = 930
       object Label2: TLabel
-        Left = 16
-        Top = 6
-        Width = 922
-        Height = 35
+        Left = -2
+        Top = 4
+        Width = 929
+        Height = 25
         Align = alCustom
         Alignment = taCenter
         AutoSize = False
