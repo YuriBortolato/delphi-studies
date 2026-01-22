@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   Align = alClient
   Caption = 'Or'#231'amento'
-  ClientHeight = 789
-  ClientWidth = 990
+  ClientHeight = 906
+  ClientWidth = 952
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,17 +12,19 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 990
+    Width = 952
     Height = 100
     Align = alTop
     Color = 12929324
     ParentBackground = False
     TabOrder = 0
     ExplicitTop = 2
+    ExplicitWidth = 990
     object lblTotal: TLabel
       Left = 362
       Top = 18
@@ -41,21 +43,24 @@ object Form1: TForm1
   object sbModulos: TScrollBox
     Left = 0
     Top = 100
-    Width = 990
-    Height = 689
+    Width = 952
+    Height = 806
     VertScrollBar.Tracking = True
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 990
+    ExplicitHeight = 689
     object pnlRowMesa: TPanel
       Left = 0
       Top = 41
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 986
       object lblValorMB: TLabel
         Left = 600
         Top = 9
@@ -85,18 +90,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowEntrega: TPanel
       Left = 0
       Top = 81
-      Width = 986
+      Width = 948
       Height = 41
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 986
       object lblValorE: TLabel
         Left = 600
         Top = 10
@@ -126,18 +133,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowFiscal: TPanel
       Left = 0
       Top = 122
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 986
       object lblValorFiscal: TLabel
         Left = 600
         Top = 9
@@ -167,12 +176,13 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowGerencePlus: TPanel
       Left = 0
       Top = 162
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
@@ -210,12 +220,13 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object Panel2: TPanel
       Left = 0
       Top = 202
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
@@ -253,18 +264,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowComeraqui: TPanel
       Left = 0
       Top = 242
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 5
+      ExplicitWidth = 986
       object lblValorCA: TLabel
         Left = 600
         Top = 9
@@ -294,18 +307,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowFinanceiro: TPanel
       Left = 0
       Top = 282
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 6
+      ExplicitWidth = 986
       object lblValorFinanceiro: TLabel
         Left = 600
         Top = 9
@@ -335,18 +350,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowDre: TPanel
       Left = 0
       Top = 322
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 7
+      ExplicitWidth = 986
       object lblValorDRE: TLabel
         Left = 600
         Top = 9
@@ -376,18 +393,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowDashboard: TPanel
       Left = 0
       Top = 362
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 8
+      ExplicitWidth = 986
       object lblValorDash: TLabel
         Left = 600
         Top = 9
@@ -417,12 +436,13 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowIfood: TPanel
       Left = 0
       Top = 402
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
@@ -430,6 +450,7 @@ object Form1: TForm1
       ParentBackground = False
       TabOrder = 9
       ExplicitLeft = 3
+      ExplicitWidth = 986
       object lblValorFood: TLabel
         Left = 600
         Top = 9
@@ -459,18 +480,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowAiqfome: TPanel
       Left = 0
       Top = 442
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 10
+      ExplicitWidth = 986
       object lblValorFome: TLabel
         Left = 600
         Top = 9
@@ -500,18 +523,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowDeliveryDireto: TPanel
       Left = 0
       Top = 482
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 11
+      ExplicitWidth = 986
       object lblValorDD: TLabel
         Left = 600
         Top = 9
@@ -541,18 +566,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowGerenceRep: TPanel
       Left = 0
       Top = 522
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 12
+      ExplicitWidth = 986
       object lblValorGRep: TLabel
         Left = 600
         Top = 9
@@ -582,12 +609,13 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = CheckBoxClickGenerico
       end
     end
     object pnlRowTerminal: TPanel
       Left = 0
       Top = 562
-      Width = 986
+      Width = 948
       Height = 40
       Align = alTop
       BevelOuter = bvNone
@@ -601,6 +629,7 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 13
       ExplicitLeft = -3
+      ExplicitWidth = 986
       object Label15: TLabel
         Left = 382
         Top = 6
@@ -653,6 +682,7 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = btnMenosClick
       end
       object btnMais: TButton
         Left = 348
@@ -667,18 +697,20 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 1
+        OnClick = btnMaisClick
       end
     end
     object pnlTituloModulos: TPanel
       Left = 0
       Top = 0
-      Width = 986
+      Width = 948
       Height = 41
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 14
+      ExplicitWidth = 986
       object Label2: TLabel
         Left = 16
         Top = 6

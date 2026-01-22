@@ -8,6 +8,8 @@ uses
 
 type
   TForm1 = class(TForm)
+
+    // Componentes Visuais
     pnlHeader: TPanel;
     sbModulos: TScrollBox;
     pnlRowMesa: TPanel;
@@ -58,16 +60,25 @@ type
     lblQtdTerminais: TLabel;
     btnMais: TButton;
     lblValorT: TLabel;
-  private
-    private
-    { Declarações privadas }
-    FQuantidade: Integer;
-    const
-      QTD_MINIMA = 3;          // Mínimo de 3 terminais
-      VALOR_BASE = 127.00;     // Preço dos 3 primeiros
-      VALOR_EXTRA = 17.00;     // Preço de cada um acima de 3
 
-    procedure AtualizarTela;   // Nossa rotina que calcula tudo}
+    // Procedimentos
+
+    procedure FormCreate(Sender: TObject);
+    procedure btnMaisClick(Sender: TObject);
+    procedure btnMenosClick(Sender: TObject);
+    procedure CheckBoxClickGenerico(Sender: TObject);
+
+  private
+    { Declarações privadas }
+    FQuantidadeTerminais: Integer;
+
+    const
+      QTD_MINIMA_TERMINAL = 3;
+      VALOR_BASE_TERMINAL = 127.00;
+      VALOR_EXTRA_TERMINAL = 17.00;
+
+    function TextoParaValor(Texto: String): Currency;
+    procedure CalcularTudo;
   public
     { Public declarations }
   end;
@@ -78,5 +89,87 @@ var
 implementation
 
 {$R *.dfm}
+
+function TForm1.TextoParaValor(Texto: String): Currency;
+var
+  TextoLimpo: String;
+begin
+  TextoLimpo := StringReplace(Texto, 'R$', '', [rfReplaceAll, rfIgnoreCase]);
+  TextoLimpo := StringReplace(TextoLimpo, ' ', '', [rfReplaceAll]);
+  TextoLimpo := StringReplace(TextoLimpo, '.', '', [rfReplaceAll]); // Tira ponto de milhar se tiver
+
+  if TextoLimpo = '' then
+    Result := 0
+  else
+    Result := StrToCurrDef(TextoLimpo, 0);
+end;
+
+
+procedure TForm1.CalcularTudo;
+var
+  TotalGeral: Currency;
+  ValorTerminal: Currency;
+  Extras: Integer;
+begin
+  TotalGeral := 0;
+
+
+  if FQuantidadeTerminais <= QTD_MINIMA_TERMINAL then
+    ValorTerminal := VALOR_BASE_TERMINAL
+  else
+  begin
+    Extras := FQuantidadeTerminais - QTD_MINIMA_TERMINAL;
+    ValorTerminal := VALOR_BASE_TERMINAL + (Extras * VALOR_EXTRA_TERMINAL);
+  end;
+
+
+  lblQtdTerminais.Caption := IntToStr(FQuantidadeTerminais);
+  lblValorT.Caption := FormatFloat('R$ #,##0.00', ValorTerminal);
+
+  TotalGeral := TotalGeral + ValorTerminal;
+
+  if chkMesaEBalcao.Checked    then TotalGeral := TotalGeral + TextoParaValor(lblValorMB.Caption);
+  if chkEntrega.Checked        then TotalGeral := TotalGeral + TextoParaValor(lblValorE.Caption);
+  if chkFiscal.Checked         then TotalGeral := TotalGeral + TextoParaValor(lblValorFiscal.Caption);
+  if chkGerencePlus.Checked    then TotalGeral := TotalGeral + TextoParaValor(lblValorGP.Caption);
+  if chkWhatsapp.Checked       then TotalGeral := TotalGeral + TextoParaValor(lblValorWpp.Caption);
+  if chkComeraqui.Checked      then TotalGeral := TotalGeral + TextoParaValor(lblValorCA.Caption);
+  if chkFinanceiro.Checked     then TotalGeral := TotalGeral + TextoParaValor(lblValorFinanceiro.Caption);
+  if chkDre.Checked            then TotalGeral := TotalGeral + TextoParaValor(lblValorDRE.Caption);
+  if chkDashboard.Checked      then TotalGeral := TotalGeral + TextoParaValor(lblValorDash.Caption);
+  if chkIfood.Checked          then TotalGeral := TotalGeral + TextoParaValor(lblValorFood.Caption);
+  if chkAiqfome.Checked        then TotalGeral := TotalGeral + TextoParaValor(lblValorFome.Caption);
+  if chkDeliveryDireto.Checked then TotalGeral := TotalGeral + TextoParaValor(lblValorDD.Caption);
+  if chkGerenceRep.Checked     then TotalGeral := TotalGeral + TextoParaValor(lblValorGRep.Caption);
+
+  lblTotal.Caption := FormatFloat('R$ #,##0.00 | mês', TotalGeral);
+end;
+
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FQuantidadeTerminais := QTD_MINIMA_TERMINAL;
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMaisClick(Sender: TObject);
+begin
+  Inc(FQuantidadeTerminais);
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMenosClick(Sender: TObject);
+begin
+  if FQuantidadeTerminais > QTD_MINIMA_TERMINAL then
+  begin
+    Dec(FQuantidadeTerminais);
+    CalcularTudo;
+  end;
+end;
+
+procedure TForm1.CheckBoxClickGenerico(Sender: TObject);
+begin
+  CalcularTudo;
+end;
 
 end.
