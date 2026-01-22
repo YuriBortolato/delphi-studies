@@ -58,7 +58,7 @@ object Form1: TForm1
       TabOrder = 0
       object lblValorMB: TLabel
         Left = 600
-        Top = 9
+        Top = 19
         Width = 70
         Height = 25
         Caption = 'R$ 17,00'
@@ -73,9 +73,9 @@ object Form1: TForm1
       object chkMesaEBalcao: TCheckBox
         AlignWithMargins = True
         Left = 288
-        Top = 2
-        Width = 233
-        Height = 32
+        Top = 6
+        Width = 201
+        Height = 40
         Margins.Left = 20
         Caption = 'Mesa e Balc'#227'o'
         Font.Charset = DEFAULT_CHARSET
@@ -179,8 +179,6 @@ object Form1: TForm1
       Color = clWhite
       ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = -2
-      ExplicitWidth = 988
       object lblValorGP: TLabel
         Left = 600
         Top = 9
@@ -198,9 +196,9 @@ object Form1: TForm1
       object chkGerencePlus: TCheckBox
         AlignWithMargins = True
         Left = 288
-        Top = -2
+        Top = 3
         Width = 247
-        Height = 45
+        Height = 47
         Margins.Left = 20
         Caption = 'Gerence Plus'
         Font.Charset = DEFAULT_CHARSET
@@ -222,8 +220,6 @@ object Form1: TForm1
       Color = clWhite
       ParentBackground = False
       TabOrder = 4
-      ExplicitLeft = -2
-      ExplicitWidth = 988
       object lblValorWpp: TLabel
         Left = 600
         Top = 10
@@ -429,7 +425,6 @@ object Form1: TForm1
       Color = clWhite
       ParentBackground = False
       TabOrder = 9
-      ExplicitLeft = 3
       object lblValorFood: TLabel
         Left = 600
         Top = 9
@@ -492,7 +487,7 @@ object Form1: TForm1
         Width = 129
         Height = 40
         Margins.Left = 20
-        Caption = 'aiqFome'
+        Caption = 'Aiqfome'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -19
