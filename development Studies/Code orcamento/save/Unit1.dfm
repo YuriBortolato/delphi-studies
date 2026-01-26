@@ -13,7 +13,727 @@ object Form1: TForm1
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
+  OnResize = FormResize
   TextHeight = 15
+  object sbModulos: TScrollBox
+    Left = 0
+    Top = 100
+    Width = 952
+    Height = 806
+    VertScrollBar.Position = 12
+    VertScrollBar.Tracking = True
+    Align = alClient
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    ExplicitTop = 105
+    object pnlContainer: TPanel
+      Left = 118
+      Top = -2
+      Width = 700
+      Height = 1500
+      BevelOuter = bvNone
+      TabOrder = 0
+      object Panel2: TPanel
+        Left = 0
+        Top = 200
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitLeft = 2
+        ExplicitTop = 203
+        ExplicitWidth = 945
+        object lblValorWpp: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 47,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkWhatsapp: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 145
+          Height = 50
+          Margins.Left = 20
+          Caption = 'Whatsapp'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowAiqfome: TPanel
+        Left = 0
+        Top = 440
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 1
+        ExplicitTop = 326
+        ExplicitWidth = 945
+        object lblValorFome: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 27,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkAiqfome: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 129
+          Height = 40
+          Margins.Left = 20
+          Caption = 'aiqFome'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowComeraqui: TPanel
+        Left = 0
+        Top = 240
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 2
+        ExplicitTop = 234
+        object lblValorCA: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 47,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkComeraqui: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 201
+          Height = 47
+          Margins.Left = 20
+          Caption = 'Comeraqui'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowDashboard: TPanel
+        Left = 0
+        Top = 360
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 3
+        ExplicitLeft = 17
+        ExplicitTop = 357
+        ExplicitWidth = 945
+        object lblValorDash: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 27,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkDashboard: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 145
+          Height = 42
+          Margins.Left = 20
+          Caption = 'Dashboard'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowDeliveryDireto: TPanel
+        Left = 0
+        Top = 480
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 4
+        ExplicitLeft = 17
+        ExplicitTop = 483
+        ExplicitWidth = 945
+        object lblValorDD: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 17,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkDeliveryDireto: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 177
+          Height = 40
+          Margins.Left = 20
+          Caption = 'DeliveryDireto'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowDre: TPanel
+        Left = 0
+        Top = 320
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 5
+        ExplicitLeft = 1
+        ExplicitTop = 317
+        ExplicitWidth = 945
+        object lblValorDRE: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 27,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkDre: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 177
+          Height = 40
+          Margins.Left = 20
+          Caption = 'DRE'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowEntrega: TPanel
+        Left = 0
+        Top = 79
+        Width = 700
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 6
+        ExplicitLeft = 2
+        ExplicitTop = 82
+        ExplicitWidth = 945
+        object lblValorE: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 17,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkEntrega: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 247
+          Height = 35
+          Margins.Left = 20
+          Caption = 'Entrega'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowFinanceiro: TPanel
+        Left = 0
+        Top = 280
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 7
+        ExplicitTop = 274
+        object lblValorFinanceiro: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 27,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkFinanceiro: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 201
+          Height = 40
+          Margins.Left = 20
+          Caption = 'Financeiro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowFiscal: TPanel
+        Left = 0
+        Top = 120
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 8
+        ExplicitLeft = 2
+        ExplicitTop = 92
+        ExplicitWidth = 945
+        object lblValorFiscal: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 47,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkFiscal: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 247
+          Height = 40
+          Margins.Left = 20
+          Caption = 'Fiscal'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowGerencePlus: TPanel
+        Left = 0
+        Top = 160
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 9
+        ExplicitLeft = -23
+        ExplicitTop = 132
+        ExplicitWidth = 945
+        object lblValorGP: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 47,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkGerencePlus: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 247
+          Height = 45
+          Margins.Left = 20
+          Caption = 'Gerence Plus'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowGerenceRep: TPanel
+        Left = 0
+        Top = 520
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 10
+        ExplicitTop = 121
+        ExplicitWidth = 948
+        object lblValorGRep: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 47,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkGerenceRep: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 145
+          Height = 34
+          Margins.Left = 20
+          Caption = 'Gerence Rep'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowIfood: TPanel
+        Left = 0
+        Top = 400
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 11
+        ExplicitTop = 403
+        ExplicitWidth = 945
+        object lblValorFood: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 27,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkIfood: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 97
+          Height = 34
+          Margins.Left = 20
+          Caption = 'ifood'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowMesa: TPanel
+        Left = 0
+        Top = 41
+        Width = 700
+        Height = 38
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 12
+        ExplicitLeft = 1
+        ExplicitTop = 46
+        ExplicitWidth = 698
+        object lblValorMB: TLabel
+          Left = 464
+          Top = 0
+          Width = 70
+          Height = 25
+          Caption = 'R$ 17,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Layout = tlCenter
+        end
+        object chkMesaEBalcao: TCheckBox
+          AlignWithMargins = True
+          Left = 106
+          Top = 0
+          Width = 233
+          Height = 32
+          Margins.Left = 20
+          Caption = 'Mesa e Balc'#227'o'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = CheckBoxClickGenerico
+        end
+      end
+      object pnlRowTerminal: TPanel
+        Left = 0
+        Top = 560
+        Width = 700
+        Height = 40
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 13
+        ExplicitLeft = 9
+        ExplicitTop = 561
+        ExplicitWidth = 698
+        object Label15: TLabel
+          Left = 211
+          Top = 0
+          Width = 72
+          Height = 25
+          AutoSize = False
+          Caption = 'Terminal'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object lblQtdTerminais: TLabel
+          Left = 144
+          Top = 0
+          Width = 10
+          Height = 25
+          Caption = '3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object lblValorT: TLabel
+          Left = 464
+          Top = 0
+          Width = 80
+          Height = 25
+          Caption = 'R$ 127,00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object btnMenos: TButton
+          Left = 106
+          Top = 0
+          Width = 25
+          Height = 25
+          Caption = '-'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          OnClick = btnMenosClick
+        end
+        object btnMais: TButton
+          Left = 172
+          Top = 0
+          Width = 25
+          Height = 25
+          Caption = '+'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+          OnClick = btnMaisClick
+        end
+      end
+      object pnlTituloModulos: TPanel
+        Left = 0
+        Top = 0
+        Width = 700
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 14
+        ExplicitWidth = 948
+        object Label2: TLabel
+          Left = 0
+          Top = 5
+          Width = 700
+          Height = 31
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'M'#243'dulos'
+          Color = 12929324
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 12929324
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Layout = tlCenter
+        end
+      end
+    end
+  end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
@@ -22,712 +742,37 @@ object Form1: TForm1
     Align = alTop
     Color = 12929324
     ParentBackground = False
-    TabOrder = 0
-    ExplicitTop = 2
-    ExplicitWidth = 990
-    object lblTotal: TLabel
-      Left = 362
-      Top = 18
-      Width = 235
-      Height = 45
-      Alignment = taCenter
-      Caption = 'R$ 127,00 | m'#234's'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
-  object sbModulos: TScrollBox
-    Left = 0
-    Top = 100
-    Width = 952
-    Height = 806
-    VertScrollBar.Tracking = True
-    Align = alClient
     TabOrder = 1
-    ExplicitWidth = 990
-    ExplicitHeight = 689
-    object pnlRowMesa: TPanel
-      Left = 0
-      Top = 41
-      Width = 948
-      Height = 40
-      Align = alTop
+    ExplicitLeft = 8
+    ExplicitWidth = 944
+    object pnlContainerHeader: TPanel
+      Left = 120
+      Top = -1
+      Width = 700
+      Height = 100
       BevelOuter = bvNone
-      Color = clWhite
+      Color = 12929324
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 986
-      object lblValorMB: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkMesaEBalcao: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 2
-        Width = 233
-        Height = 32
-        Margins.Left = 20
-        Caption = 'Mesa e Balc'#227'o'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowEntrega: TPanel
-      Left = 0
-      Top = 81
-      Width = 948
-      Height = 41
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 1
-      ExplicitWidth = 986
-      object lblValorE: TLabel
-        Left = 600
-        Top = 10
-        Width = 70
-        Height = 25
-        Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkEntrega: TCheckBox
-        AlignWithMargins = True
-        Left = 288
+      object lblTotal: TLabel
+        Left = 0
         Top = 0
-        Width = 247
-        Height = 35
-        Margins.Left = 20
-        Caption = 'Entrega'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowFiscal: TPanel
-      Left = 0
-      Top = 122
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 2
-      ExplicitWidth = 986
-      object lblValorFiscal: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkFiscal: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 247
-        Height = 40
-        Margins.Left = 20
-        Caption = 'Fiscal'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowGerencePlus: TPanel
-      Left = 0
-      Top = 162
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 3
-      ExplicitLeft = -2
-      ExplicitWidth = 988
-      object lblValorGP: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkGerencePlus: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = -2
-        Width = 247
-        Height = 45
-        Margins.Left = 20
-        Caption = 'Gerence Plus'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object Panel2: TPanel
-      Left = 0
-      Top = 202
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 4
-      ExplicitLeft = -2
-      ExplicitWidth = 988
-      object lblValorWpp: TLabel
-        Left = 600
-        Top = 10
-        Width = 70
-        Height = 25
-        Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkWhatsapp: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 145
-        Height = 50
-        Margins.Left = 20
-        Caption = 'Whatsapp'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowComeraqui: TPanel
-      Left = 0
-      Top = 242
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 5
-      ExplicitWidth = 986
-      object lblValorCA: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkComeraqui: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 201
-        Height = 47
-        Margins.Left = 20
-        Caption = 'Comeraqui'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowFinanceiro: TPanel
-      Left = 0
-      Top = 282
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 6
-      ExplicitWidth = 986
-      object lblValorFinanceiro: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkFinanceiro: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 201
-        Height = 40
-        Margins.Left = 20
-        Caption = 'Financeiro'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowDre: TPanel
-      Left = 0
-      Top = 322
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 7
-      ExplicitWidth = 986
-      object lblValorDRE: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkDre: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 177
-        Height = 40
-        Margins.Left = 20
-        Caption = 'DRE'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowDashboard: TPanel
-      Left = 0
-      Top = 362
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 8
-      ExplicitWidth = 986
-      object lblValorDash: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkDashboard: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 145
-        Height = 42
-        Margins.Left = 20
-        Caption = 'Dashboard'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowIfood: TPanel
-      Left = 0
-      Top = 402
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 9
-      ExplicitLeft = 3
-      ExplicitWidth = 986
-      object lblValorFood: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkIfood: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 97
-        Height = 34
-        Margins.Left = 20
-        Caption = 'ifood'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowAiqfome: TPanel
-      Left = 0
-      Top = 442
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 10
-      ExplicitWidth = 986
-      object lblValorFome: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 27,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkAiqfome: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 129
-        Height = 40
-        Margins.Left = 20
-        Caption = 'aiqFome'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowDeliveryDireto: TPanel
-      Left = 0
-      Top = 482
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 11
-      ExplicitWidth = 986
-      object lblValorDD: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 17,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkDeliveryDireto: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 0
-        Width = 177
-        Height = 40
-        Margins.Left = 20
-        Caption = 'DeliveryDireto'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowGerenceRep: TPanel
-      Left = 0
-      Top = 522
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 12
-      ExplicitWidth = 986
-      object lblValorGRep: TLabel
-        Left = 600
-        Top = 9
-        Width = 70
-        Height = 25
-        Caption = 'R$ 47,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        Layout = tlCenter
-      end
-      object chkGerenceRep: TCheckBox
-        AlignWithMargins = True
-        Left = 288
-        Top = 6
-        Width = 145
-        Height = 34
-        Margins.Left = 20
-        Caption = 'GerenceRep'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = CheckBoxClickGenerico
-      end
-    end
-    object pnlRowTerminal: TPanel
-      Left = 0
-      Top = 562
-      Width = 948
-      Height = 40
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentBackground = False
-      ParentFont = False
-      TabOrder = 13
-      ExplicitLeft = -3
-      ExplicitWidth = 986
-      object Label15: TLabel
-        Left = 382
-        Top = 6
-        Width = 72
-        Height = 25
-        Caption = 'Terminal'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lblQtdTerminais: TLabel
-        Left = 320
-        Top = 6
-        Width = 10
-        Height = 25
-        Caption = '3'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lblValorT: TLabel
-        Left = 590
-        Top = 6
-        Width = 80
-        Height = 25
-        Caption = 'R$ 127,00'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object btnMenos: TButton
-        Left = 288
-        Top = 6
-        Width = 20
-        Height = 20
-        Caption = '-'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = btnMenosClick
-      end
-      object btnMais: TButton
-        Left = 348
-        Top = 6
-        Width = 20
-        Height = 20
-        Caption = '+'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-        OnClick = btnMaisClick
-      end
-    end
-    object pnlTituloModulos: TPanel
-      Left = 0
-      Top = 0
-      Width = 948
-      Height = 41
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      ParentBackground = False
-      TabOrder = 14
-      ExplicitWidth = 986
-      object Label2: TLabel
-        Left = 16
-        Top = 6
-        Width = 922
-        Height = 35
-        Align = alCustom
+        Width = 700
+        Height = 100
+        Align = alClient
         Alignment = taCenter
         AutoSize = False
-        Caption = 'M'#243'dulos'
-        Color = 12929324
+        Caption = 'R$ 127,00 | m'#234's'
+        Color = clWhite
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = 12929324
-        Font.Height = -19
+        Font.Color = clWhite
+        Font.Height = -32
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
+        Layout = tlCenter
+        ExplicitHeight = 98
       end
     end
   end

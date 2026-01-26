@@ -60,6 +60,8 @@ type
     lblQtdTerminais: TLabel;
     btnMais: TButton;
     lblValorT: TLabel;
+    pnlContainer: TPanel;
+    pnlContainerHeader: TPanel;
 
     // Procedimentos
 
@@ -67,6 +69,7 @@ type
     procedure btnMaisClick(Sender: TObject);
     procedure btnMenosClick(Sender: TObject);
     procedure CheckBoxClickGenerico(Sender: TObject);
+    procedure FormResize(Sender: TObject);
 
   private
     { Declarações privadas }
@@ -150,6 +153,21 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   FQuantidadeTerminais := QTD_MINIMA_TERMINAL;
   CalcularTudo;
+end;
+
+procedure TForm1.FormResize(Sender: TObject);
+begin
+  // Centraliza Cabeçalho
+  if Assigned(pnlContainerHeader) then
+  begin
+    pnlContainerHeader.Left := (pnlHeader.Width - pnlContainerHeader.Width) div 2;
+    pnlContainerHeader.Top  := (pnlHeader.Height - pnlContainerHeader.Height) div 2;
+  end;
+  // Centraliza Lista de Módulos
+  if Assigned(pnlContainer) then
+  begin
+    pnlContainer.Left := (sbModulos.Width - pnlContainer.Width) div 2;
+  end;
 end;
 
 procedure TForm1.btnMaisClick(Sender: TObject);
