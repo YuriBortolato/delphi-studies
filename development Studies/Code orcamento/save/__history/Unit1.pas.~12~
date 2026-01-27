@@ -157,18 +157,16 @@ end;
 
 procedure TForm1.FormResize(Sender: TObject);
 begin
+  // Centraliza Cabeçalho
   if Assigned(pnlContainerHeader) then
   begin
-    pnlContainerHeader.Top := 0;
-    pnlContainerHeader.Height := pnlHeader.Height;
-
     pnlContainerHeader.Left := (pnlHeader.Width - pnlContainerHeader.Width) div 2;
+    pnlContainerHeader.Top  := (pnlHeader.Height - pnlContainerHeader.Height) div 2;
   end;
-
+  // Centraliza Lista de Módulos
   if Assigned(pnlContainer) then
   begin
     pnlContainer.Left := (sbModulos.Width - pnlContainer.Width) div 2;
-    pnlContainer.Top := 0;
   end;
 end;
 
