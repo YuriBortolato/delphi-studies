@@ -26,7 +26,6 @@ object Form1: TForm1
     Color = clWhite
     ParentColor = False
     TabOrder = 0
-    ExplicitTop = 105
     object pnlContainer: TPanel
       Left = 118
       Top = -2
@@ -704,7 +703,6 @@ object Form1: TForm1
     Width = 952
     Height = 100
     Align = alTop
-    BevelOuter = bvNone
     Color = 12929324
     ParentBackground = False
     TabOrder = 1
