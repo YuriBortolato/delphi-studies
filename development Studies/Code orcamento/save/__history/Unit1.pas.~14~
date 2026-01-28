@@ -99,7 +99,7 @@ var
 begin
   TextoLimpo := StringReplace(Texto, 'R$', '', [rfReplaceAll, rfIgnoreCase]);
   TextoLimpo := StringReplace(TextoLimpo, ' ', '', [rfReplaceAll]);
-  TextoLimpo := StringReplace(TextoLimpo, '.', '', [rfReplaceAll]);
+  TextoLimpo := StringReplace(TextoLimpo, '.', '', [rfReplaceAll]); // Tira ponto de milhar se tiver
 
   if TextoLimpo = '' then
     Result := 0
