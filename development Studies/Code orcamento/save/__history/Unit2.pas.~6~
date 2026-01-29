@@ -31,6 +31,8 @@ implementation
 
 {$R *.dfm}
 
+// Clique no Confirmar
+// Clique no Cancelar
 procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
 begin
 

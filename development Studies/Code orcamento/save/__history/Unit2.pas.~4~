@@ -17,7 +17,6 @@ type
     pnlConfirmar: TPanel;
     pnlCancelar: TPanel;
     procedure pnlConfirmarClick(Sender: TObject);
-    procedure pnlCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,15 +30,18 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
-begin
-
-  ModalResult := mrCancel;
-end;
-
+// Clique no Painel AZUL (Confirmar)
 procedure TFrmDesconto.pnlConfirmarClick(Sender: TObject);
 begin
+  // Isso diz para o formulário: "Deu tudo certo, pode fechar!"
   ModalResult := mrOk;
+end;
+
+// Clique no Painel VERMELHO (Cancelar)
+procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
+begin
+  // Isso diz: "Cancela tudo e fecha!"
+  ModalResult := mrCancel;
 end;
 
 end.

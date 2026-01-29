@@ -88,7 +88,6 @@ object FrmDesconto: TFrmDesconto
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    OnClick = pnlConfirmarClick
   end
   object pnlCancelar: TPanel
     Left = 200
@@ -107,6 +106,5 @@ object FrmDesconto: TFrmDesconto
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    OnClick = pnlCancelarClick
   end
 end

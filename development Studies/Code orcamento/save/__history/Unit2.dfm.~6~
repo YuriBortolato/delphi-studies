@@ -107,6 +107,5 @@ object FrmDesconto: TFrmDesconto
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    OnClick = pnlCancelarClick
   end
 end

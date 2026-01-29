@@ -16,8 +16,6 @@ type
     lblValorFinal: TLabel;
     pnlConfirmar: TPanel;
     pnlCancelar: TPanel;
-    procedure pnlConfirmarClick(Sender: TObject);
-    procedure pnlCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,16 +28,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
-begin
-
-  ModalResult := mrCancel;
-end;
-
-procedure TFrmDesconto.pnlConfirmarClick(Sender: TObject);
-begin
-  ModalResult := mrOk;
-end;
 
 end.
