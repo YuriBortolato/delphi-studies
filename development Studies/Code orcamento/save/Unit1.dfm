@@ -20,7 +20,6 @@ object Form1: TForm1
     Top = 100
     Width = 952
     Height = 806
-    VertScrollBar.Position = 12
     VertScrollBar.Tracking = True
     Align = alClient
     Color = clWhite
@@ -28,7 +27,7 @@ object Form1: TForm1
     TabOrder = 0
     object pnlContainer: TPanel
       Left = 118
-      Top = -2
+      Top = 15
       Width = 700
       Height = 1500
       BevelOuter = bvNone
@@ -44,6 +43,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 0
         object lblValorWpp: TLabel
+          Tag = 5
           Left = 464
           Top = 0
           Width = 70
@@ -56,6 +56,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkWhatsapp: TCheckBox
           AlignWithMargins = True
@@ -86,6 +87,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 1
         object lblValorFome: TLabel
+          Tag = 11
           Left = 464
           Top = 0
           Width = 70
@@ -98,6 +100,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkAiqfome: TCheckBox
           AlignWithMargins = True
@@ -128,6 +131,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 2
         object lblValorCA: TLabel
+          Tag = 6
           Left = 464
           Top = 0
           Width = 70
@@ -140,6 +144,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkComeraqui: TCheckBox
           AlignWithMargins = True
@@ -170,6 +175,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 3
         object lblValorDash: TLabel
+          Tag = 9
           Left = 464
           Top = 0
           Width = 70
@@ -182,6 +188,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkDashboard: TCheckBox
           AlignWithMargins = True
@@ -212,6 +219,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 4
         object lblValorDD: TLabel
+          Tag = 12
           Left = 464
           Top = 0
           Width = 70
@@ -224,6 +232,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkDeliveryDireto: TCheckBox
           AlignWithMargins = True
@@ -254,6 +263,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 5
         object lblValorDRE: TLabel
+          Tag = 8
           Left = 464
           Top = 0
           Width = 70
@@ -266,6 +276,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkDre: TCheckBox
           AlignWithMargins = True
@@ -296,6 +307,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 6
         object lblValorE: TLabel
+          Tag = 2
           Left = 464
           Top = 0
           Width = 70
@@ -308,6 +320,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkEntrega: TCheckBox
           AlignWithMargins = True
@@ -338,6 +351,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 7
         object lblValorFinanceiro: TLabel
+          Tag = 7
           Left = 464
           Top = 0
           Width = 70
@@ -350,6 +364,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkFinanceiro: TCheckBox
           AlignWithMargins = True
@@ -380,6 +395,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 8
         object lblValorFiscal: TLabel
+          Tag = 3
           Left = 464
           Top = 0
           Width = 70
@@ -392,6 +408,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkFiscal: TCheckBox
           AlignWithMargins = True
@@ -422,6 +439,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 9
         object lblValorGP: TLabel
+          Tag = 4
           Left = 464
           Top = 0
           Width = 70
@@ -434,6 +452,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkGerencePlus: TCheckBox
           AlignWithMargins = True
@@ -464,6 +483,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 10
         object lblValorGRep: TLabel
+          Tag = 13
           Left = 464
           Top = 0
           Width = 70
@@ -476,6 +496,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkGerenceRep: TCheckBox
           AlignWithMargins = True
@@ -506,6 +527,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 11
         object lblValorFood: TLabel
+          Tag = 10
           Left = 464
           Top = 0
           Width = 70
@@ -518,6 +540,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkIfood: TCheckBox
           AlignWithMargins = True
@@ -548,6 +571,7 @@ object Form1: TForm1
         ParentBackground = False
         TabOrder = 12
         object lblValorMB: TLabel
+          Tag = 1
           Left = 464
           Top = 0
           Width = 70
@@ -560,6 +584,7 @@ object Form1: TForm1
           Font.Style = []
           ParentFont = False
           Layout = tlCenter
+          OnClick = LabelPrecoClick
         end
         object chkMesaEBalcao: TCheckBox
           AlignWithMargins = True

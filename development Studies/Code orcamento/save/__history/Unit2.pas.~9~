@@ -1,0 +1,127 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TFrmDesconto = class(TForm)
+    Label1: TLabel;
+    edtValorAtual: TEdit;
+    Label2: TLabel;
+    edtDesconto: TEdit;
+
+    // Labels de Resumo
+    lblResumo: TLabel;          // "Valor sem desconto: R$ 47,00"
+    lblValorDesconto: TLabel;   // "Desconto: -R$ 45,00"
+    lblPorcentagem: TLabel;     // "Desconto em %: 95.74"
+    lblValorFinal: TLabel;      // "Valor final: R$ 2,00"
+
+    // Botões
+    pnlConfirmar: TPanel;
+    pnlCancelar: TPanel;
+
+    procedure FormShow(Sender: TObject);
+    procedure edtDescontoChange(Sender: TObject);
+    procedure pnlConfirmarClick(Sender: TObject);
+    procedure pnlCancelarClick(Sender: TObject);
+  private
+    FValorOriginal: Currency;
+    FValorFinal: Currency;
+  public
+    // Propriedades
+    property ValorOriginal: Currency read FValorOriginal write FValorOriginal;
+    property ValorFinal: Currency read FValorFinal;
+  end;
+
+var
+  FrmDesconto: TFrmDesconto;
+
+implementation
+
+{$R *.dfm}
+
+// Função segura para converter texto em número
+function StrToCurrSafe(Texto: String): Currency;
+begin
+  // Remove R$, espaços e pontos de milhar, mantém a vírgula
+  Texto := StringReplace(Texto, 'R$', '', [rfReplaceAll, rfIgnoreCase]);
+  Texto := StringReplace(Texto, ' ', '', [rfReplaceAll]);
+  Texto := StringReplace(Texto, '.', '', [rfReplaceAll]);
+
+  if (Trim(Texto) = '') or (Trim(Texto) = ',') then
+    Result := 0
+  else
+    Result := StrToCurrDef(Trim(Texto), 0);
+end;
+
+procedure TFrmDesconto.FormShow(Sender: TObject);
+begin
+  // 1. Mostra o valor original assim que a tela abre
+  edtValorAtual.Text := FormatFloat('#,##0.00', FValorOriginal);
+
+  // 2. Preenche o resumo inicial
+  lblResumo.Caption := 'Valor sem desconto: ' + FormatFloat('R$ #,##0.00', FValorOriginal);
+
+  // 3. Limpa o campo de desconto (para não ficar "045")
+  edtDesconto.Text := '';
+
+  // 4. Força o cálculo inicial (para zerar os outros labels)
+  edtDescontoChange(Self);
+
+  // 5. Coloca o cursor no campo de desconto
+  edtDesconto.SetFocus;
+end;
+
+procedure TFrmDesconto.edtDescontoChange(Sender: TObject);
+var
+  VlDesconto: Currency;
+  Porcentagem: Double;
+begin
+  // Pega o valor digitado
+  VlDesconto := StrToCurrSafe(edtDesconto.Text);
+
+  // Calcula o valor final
+  FValorFinal := FValorOriginal - VlDesconto;
+  if FValorFinal < 0 then FValorFinal := 0;
+
+  // Calcula a Porcentagem: (Desconto / Original) * 100
+  if FValorOriginal > 0 then
+    Porcentagem := (VlDesconto / FValorOriginal) * 100
+  else
+    Porcentagem := 0;
+
+  // --- Atualiza os Textos na Tela ---
+
+  // Texto vermelho do desconto: "-R$ 45,00"
+  lblValorDesconto.Caption := 'Desconto: -' + FormatFloat('R$ #,##0.00', VlDesconto);
+  lblValorDesconto.Font.Color := clRed;
+
+  // Texto da porcentagem: "Desconto em %: 95.74"
+  lblPorcentagem.Caption := 'Desconto em %: ' + FormatFloat('0.00', Porcentagem);
+
+  // Texto verde do final: "Valor final com desconto: R$ 2,00"
+  lblValorFinal.Caption := 'Valor final com desconto: ' + FormatFloat('R$ #,##0.00', FValorFinal);
+
+  // Lógica de cor do Valor Final
+  if VlDesconto > 0 then
+    lblValorFinal.Font.Color := clGreen // Verde se tiver desconto
+  else
+    lblValorFinal.Font.Color := clWindowText; // Preto se for normal
+end;
+
+// Botão Confirmar
+procedure TFrmDesconto.pnlConfirmarClick(Sender: TObject);
+begin
+  ModalResult := mrOk;
+end;
+
+// Botão Cancelar
+procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
+begin
+  ModalResult := mrCancel;
+end;
+
+end.

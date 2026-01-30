@@ -12,16 +12,26 @@ type
     edtValorAtual: TEdit;
     Label2: TLabel;
     edtDesconto: TEdit;
+
+
     lblResumo: TLabel;
-    lblValorFinal: TLabel;
+    lblValorDesconto: TLabel;
+    lblPorcentagem: TLabel;
+
     pnlConfirmar: TPanel;
     pnlCancelar: TPanel;
+    lblValorFinal: TLabel;
+
+    procedure FormShow(Sender: TObject);
+    procedure edtDescontoChange(Sender: TObject);
     procedure pnlConfirmarClick(Sender: TObject);
     procedure pnlCancelarClick(Sender: TObject);
   private
-    { Private declarations }
+    FValorOriginal: Currency;
+    FValorFinal: Currency;
   public
-    { Public declarations }
+    property ValorOriginal: Currency read FValorOriginal write FValorOriginal;
+    property ValorFinal: Currency read FValorFinal;
   end;
 
 var
@@ -31,15 +41,78 @@ implementation
 
 {$R *.dfm}
 
-procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
+function StrToCurrSafe(Texto: String): Currency;
+begin
+  Texto := StringReplace(Texto, 'R$', '', [rfReplaceAll, rfIgnoreCase]);
+  Texto := StringReplace(Texto, ' ', '', [rfReplaceAll]);
+  Texto := StringReplace(Texto, '.', '', [rfReplaceAll]);
+
+  if (Trim(Texto) = '') or (Trim(Texto) = ',') then
+    Result := 0
+  else
+    Result := StrToCurrDef(Trim(Texto), 0);
+end;
+
+procedure TFrmDesconto.FormShow(Sender: TObject);
+begin
+  edtValorAtual.Text := FormatFloat('#,##0.00', FValorOriginal);
+
+  lblResumo.Caption := 'Valor sem desconto: ' + FormatFloat('R$ #,##0.00', FValorOriginal);
+
+  edtDesconto.Text := '';
+
+  edtDescontoChange(Self);
+
+  edtDesconto.SetFocus;
+end;
+
+procedure TFrmDesconto.edtDescontoChange(Sender: TObject);
+var
+  VlDesconto: Currency;
+  Porcentagem: Double;
 begin
 
-  ModalResult := mrCancel;
+  VlDesconto := StrToCurrSafe(edtDesconto.Text);
+
+
+  FValorFinal := FValorOriginal - VlDesconto;
+  if FValorFinal < 0 then FValorFinal := 0;
+
+
+  if FValorOriginal > 0 then
+    Porcentagem := (VlDesconto / FValorOriginal) * 100
+  else
+    Porcentagem := 0;
+
+
+
+
+  lblValorDesconto.Caption := 'Desconto: -' + FormatFloat('R$ #,##0.00', VlDesconto);
+  lblValorDesconto.Font.Color := clRed;
+
+
+  lblPorcentagem.Caption := 'Desconto em %: ' + FormatFloat('0.00', Porcentagem);
+
+
+  lblValorFinal.Caption := 'Valor final com desconto: ' + FormatFloat('R$ #,##0.00', FValorFinal);
+
+
+  if VlDesconto > 0 then
+    lblValorFinal.Font.Color := clGreen
+  else
+    lblValorFinal.Font.Color := clWindowText;
 end;
+
 
 procedure TFrmDesconto.pnlConfirmarClick(Sender: TObject);
 begin
   ModalResult := mrOk;
+end;
+
+
+procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
+begin
+  ModalResult := mrCancel;
 end;
 
 end.
