@@ -1,0 +1,75 @@
+unit uPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Controls.Presentation, FMX.Objects;
+
+type
+  TForm1 = class(TForm)
+    VertScrollBox1: TVertScrollBox;
+    Rectangle1: TRectangle;
+    lblTotal: TLabel;
+    Layout1: TLayout;
+    chkMesa: TCheckBox;
+    lblValorMB: TLabel;
+    Layout2: TLayout;
+    chkEntrega: TCheckBox;
+    lblValorE: TLabel;
+    Layout3: TLayout;
+    chkFiscal: TCheckBox;
+    lblValorFiscal: TLabel;
+    Layout4: TLayout;
+    chkGerencePlus: TCheckBox;
+    lblValorGP: TLabel;
+    Layout5: TLayout;
+    chkWhatsapp: TCheckBox;
+    lblValorWpp: TLabel;
+    Layout6: TLayout;
+    chkComeraqui: TCheckBox;
+    lblValorCA: TLabel;
+    Layout7: TLayout;
+    chkFinanceiro: TCheckBox;
+    lblValorFinanceiro: TLabel;
+    Layout8: TLayout;
+    chkDre: TCheckBox;
+    lblValorDRE: TLabel;
+    Layout9: TLayout;
+    chkDashboard: TCheckBox;
+    lblValorDash: TLabel;
+    Layout10: TLayout;
+    chkIfood: TCheckBox;
+    lblValorFood: TLabel;
+    Layout11: TLayout;
+    chkAiqfome: TCheckBox;
+    lblValorFome: TLabel;
+    Layout12: TLayout;
+    chkDeliveryDireto: TCheckBox;
+    lblValorDD: TLabel;
+    Layout13: TLayout;
+    chkGerenceRep: TCheckBox;
+    lblValorGRep: TLabel;
+    Layout14: TLayout;
+    btnMenos: TRectangle;
+    Label1: TLabel;
+    Rectangle2: TRectangle;
+    Label2: TLabel;
+    lblQtdTerminais: TLabel;
+    Label3: TLabel;
+    lblValorT: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+end.
