@@ -1,0 +1,47 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TFrmDesconto = class(TForm)
+    Label1: TLabel;
+    edtValorAtual: TEdit;
+    Label2: TLabel;
+    edtDesconto: TEdit;
+    lblResumo: TLabel;
+    lblValorFinal: TLabel;
+    pnlConfirmar: TPanel;
+    pnlCancelar: TPanel;
+    procedure pnlConfirmarClick(Sender: TObject);
+    procedure pnlCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmDesconto: TFrmDesconto;
+
+implementation
+
+{$R *.dfm}
+
+// Clique no Confirmar
+// Clique no Cancelar
+procedure TFrmDesconto.pnlCancelarClick(Sender: TObject);
+begin
+
+  ModalResult := mrCancel;
+end;
+
+procedure TFrmDesconto.pnlConfirmarClick(Sender: TObject);
+begin
+  ModalResult := mrOk;
+end;
+
+end.

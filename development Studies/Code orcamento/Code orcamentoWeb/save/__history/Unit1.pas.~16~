@@ -1,0 +1,248 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Unit2; // <--- IMPORTANTE: Adicione Unit2 aqui para abrir a janela
+
+type
+  TForm1 = class(TForm)
+    // --- Seus Componentes ---
+    pnlHeader: TPanel;
+    sbModulos: TScrollBox;
+    pnlContainer: TPanel;
+    pnlContainerHeader: TPanel;
+    pnlRowMesa: TPanel;
+    pnlRowEntrega: TPanel;
+    pnlRowFiscal: TPanel;
+    pnlRowGerencePlus: TPanel;
+    Panel2: TPanel;
+    pnlRowComeraqui: TPanel;
+    pnlRowFinanceiro: TPanel;
+    pnlRowDre: TPanel;
+    pnlRowDashboard: TPanel;
+    pnlRowIfood: TPanel;
+    pnlRowAiqfome: TPanel;
+    pnlRowDeliveryDireto: TPanel;
+    pnlRowGerenceRep: TPanel;
+    pnlRowTerminal: TPanel;
+    lblTotal: TLabel;
+
+    // CheckBoxes
+    chkMesaEBalcao: TCheckBox;
+    chkEntrega: TCheckBox;
+    chkFiscal: TCheckBox;
+    chkGerencePlus: TCheckBox;
+    chkWhatsapp: TCheckBox;
+    chkComeraqui: TCheckBox;
+    chkFinanceiro: TCheckBox;
+    chkDre: TCheckBox;
+    chkDashboard: TCheckBox;
+    chkIfood: TCheckBox;
+    chkAiqfome: TCheckBox;
+    chkDeliveryDireto: TCheckBox;
+    chkGerenceRep: TCheckBox;
+
+    // Labels de Preço (Certifique-se que as TAGs estão de 1 a 13)
+    lblValorMB: TLabel;
+    lblValorE: TLabel;
+    lblValorFiscal: TLabel;
+    lblValorGP: TLabel;
+    lblValorWpp: TLabel;
+    lblValorCA: TLabel;
+    lblValorFinanceiro: TLabel;
+    lblValorDRE: TLabel;
+    lblValorDash: TLabel;
+    lblValorFood: TLabel;
+    lblValorFome: TLabel;
+    lblValorDD: TLabel;
+    lblValorGRep: TLabel;
+
+    // Outros Labels
+    pnlTituloModulos: TPanel;
+    Label2: TLabel;
+    Label15: TLabel;
+
+    // Terminal
+    btnMenos: TButton;
+    lblQtdTerminais: TLabel;
+    btnMais: TButton;
+    lblValorT: TLabel;
+
+    // --- Procedimentos ---
+    procedure FormCreate(Sender: TObject);
+    procedure btnMaisClick(Sender: TObject);
+    procedure btnMenosClick(Sender: TObject);
+    procedure CheckBoxClickGenerico(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure LabelPrecoClick(Sender: TObject); // <--- NOVO: O clique do preço
+
+  private
+    FQuantidadeTerminais: Integer;
+
+    // Array para guardar os preços atuais (com ou sem desconto)
+    PrecosAtuais: array[1..13] of Currency;
+
+    const
+      QTD_MINIMA_TERMINAL = 3;
+      VALOR_BASE_TERMINAL = 127.00;
+      VALOR_EXTRA_TERMINAL = 17.00;
+
+    procedure InicializarPrecos;
+    procedure CalcularTudo;
+  public
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+// 1. Define os preços originais (Tabela)
+procedure TForm1.InicializarPrecos;
+begin
+  PrecosAtuais[1]  := 17.00; // Mesa
+  PrecosAtuais[2]  := 17.00; // Entrega
+  PrecosAtuais[3]  := 47.00; // Fiscal
+  PrecosAtuais[4]  := 47.00; // Gerence Plus
+  PrecosAtuais[5]  := 47.00; // Whatsapp
+  PrecosAtuais[6]  := 47.00; // Comeraqui
+  PrecosAtuais[7]  := 27.00; // Financeiro
+  PrecosAtuais[8]  := 27.00; // DRE
+  PrecosAtuais[9]  := 27.00; // Dashboard
+  PrecosAtuais[10] := 27.00; // Ifood
+  PrecosAtuais[11] := 27.00; // Aiqfome
+  PrecosAtuais[12] := 17.00; // Delivery Direto
+  PrecosAtuais[13] := 47.00; // Gerence Rep
+end;
+
+// 2. O Cérebro da Calculadora
+procedure TForm1.CalcularTudo;
+var
+  TotalGeral: Currency;
+  ValorTerminal: Currency;
+  Extras: Integer;
+begin
+  TotalGeral := 0;
+
+  // -- Terminais --
+  if FQuantidadeTerminais <= QTD_MINIMA_TERMINAL then
+    ValorTerminal := VALOR_BASE_TERMINAL
+  else
+  begin
+    Extras := FQuantidadeTerminais - QTD_MINIMA_TERMINAL;
+    ValorTerminal := VALOR_BASE_TERMINAL + (Extras * VALOR_EXTRA_TERMINAL);
+  end;
+
+  lblQtdTerminais.Caption := IntToStr(FQuantidadeTerminais);
+  lblValorT.Caption := FormatFloat('R$ #,##0.00', ValorTerminal);
+  TotalGeral := TotalGeral + ValorTerminal;
+
+  // -- Módulos (Usa o Array de preços, que pode ter sido alterado pelo desconto) --
+  if chkMesaEBalcao.Checked    then TotalGeral := TotalGeral + PrecosAtuais[1];
+  if chkEntrega.Checked        then TotalGeral := TotalGeral + PrecosAtuais[2];
+  if chkFiscal.Checked         then TotalGeral := TotalGeral + PrecosAtuais[3];
+  if chkGerencePlus.Checked    then TotalGeral := TotalGeral + PrecosAtuais[4];
+  if chkWhatsapp.Checked       then TotalGeral := TotalGeral + PrecosAtuais[5];
+  if chkComeraqui.Checked      then TotalGeral := TotalGeral + PrecosAtuais[6];
+  if chkFinanceiro.Checked     then TotalGeral := TotalGeral + PrecosAtuais[7];
+  if chkDre.Checked            then TotalGeral := TotalGeral + PrecosAtuais[8];
+  if chkDashboard.Checked      then TotalGeral := TotalGeral + PrecosAtuais[9];
+  if chkIfood.Checked          then TotalGeral := TotalGeral + PrecosAtuais[10];
+  if chkAiqfome.Checked        then TotalGeral := TotalGeral + PrecosAtuais[11];
+  if chkDeliveryDireto.Checked then TotalGeral := TotalGeral + PrecosAtuais[12];
+  if chkGerenceRep.Checked     then TotalGeral := TotalGeral + PrecosAtuais[13];
+
+  lblTotal.Caption := FormatFloat('R$ #,##0.00 | mês', TotalGeral);
+end;
+
+// 3. EVENTO DE CLIQUE NO PREÇO (Abre a Unit2)
+procedure TForm1.LabelPrecoClick(Sender: TObject);
+var
+  LblClicado: TLabel;
+  TagID: Integer;
+begin
+  LblClicado := Sender as TLabel;
+  TagID := LblClicado.Tag;
+
+  if TagID = 0 then Exit; // Segurança se esqueceu a Tag
+
+  // Cria a janela de desconto
+  FrmDesconto := TFrmDesconto.Create(Application);
+  try
+    // Passa o preço atual para a janela
+    FrmDesconto.ValorOriginal := PrecosAtuais[TagID];
+
+    // Abre e espera confirmar
+    if FrmDesconto.ShowModal = mrOk then
+    begin
+      // Atualiza o preço na memória
+      PrecosAtuais[TagID] := FrmDesconto.ValorFinal;
+
+      // Atualiza o texto na tela
+      LblClicado.Caption := FormatFloat('R$ #,##0.00', PrecosAtuais[TagID]);
+
+      // Muda a cor se teve desconto
+      if PrecosAtuais[TagID] < FrmDesconto.ValorOriginal then
+        LblClicado.Font.Color := clGreen // Verde
+      else
+        LblClicado.Font.Color := clWindowText; // Preto
+
+      // Recalcula o total lá em cima
+      CalcularTudo;
+    end;
+  finally
+    FrmDesconto.Free;
+  end;
+end;
+
+// --- Eventos Padrão ---
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FQuantidadeTerminais := QTD_MINIMA_TERMINAL;
+  InicializarPrecos; // Carrega os valores padrão
+  CalcularTudo;
+end;
+
+procedure TForm1.FormResize(Sender: TObject);
+begin
+  if Assigned(pnlContainerHeader) then
+  begin
+    pnlContainerHeader.Top := 0;
+    pnlContainerHeader.Height := pnlHeader.Height;
+    pnlContainerHeader.Left := (pnlHeader.Width - pnlContainerHeader.Width) div 2;
+  end;
+
+  if Assigned(pnlContainer) then
+  begin
+    pnlContainer.Left := (sbModulos.Width - pnlContainer.Width) div 2;
+    pnlContainer.Top := 0;
+  end;
+end;
+
+procedure TForm1.btnMaisClick(Sender: TObject);
+begin
+  Inc(FQuantidadeTerminais);
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMenosClick(Sender: TObject);
+begin
+  if FQuantidadeTerminais > QTD_MINIMA_TERMINAL then
+  begin
+    Dec(FQuantidadeTerminais);
+    CalcularTudo;
+  end;
+end;
+
+procedure TForm1.CheckBoxClickGenerico(Sender: TObject);
+begin
+  CalcularTudo;
+end;
+
+end.
