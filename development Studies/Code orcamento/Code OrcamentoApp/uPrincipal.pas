@@ -26,7 +26,21 @@ type
     // Terminal
     lblQtdTerminais: TLabel;
     lblValorT: TLabel;  // Rectangle agindo como botão
-    btnMenos: TRectangle; // Rectangle agindo como botão
+    btnMenos: TRectangle;
+    MesaLayout: TLayout;
+    LayoutEntrega: TLayout;
+    LayoutFiscal: TLayout;
+    LayoutGerencePlus: TLayout;
+    LayoutWhatsapp: TLayout;
+    LayoutComeraqui: TLayout;
+    LayoutFinanceiro: TLayout;
+    LayoutDre: TLayout;
+    LayoutDashboard: TLayout;
+    IfoodLayout: TLayout;
+    LayoutAiqfome: TLayout;
+    LayoutDeliveryDireto: TLayout;
+    LayoutGerenceRep: TLayout;
+    LayoutQtdTerminais: TLayout; // Rectangle agindo como botão
 
     procedure FormCreate(Sender: TObject);
     procedure CalcularEvent(Sender: TObject); // Ligado aos Checks
