@@ -1,0 +1,195 @@
+object FrmDesconto: TFrmDesconto
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Ajustar valores dos m'#243'dulos'
+  ClientHeight = 444
+  ClientWidth = 335
+  Fill.Color = xAA000000
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  Transparency = True
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object rectFundo: TLayout
+    Align = Center
+    Size.Width = 331.000000000000000000
+    Size.Height = 437.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Rectangle2: TRectangle
+      Align = Center
+      Fill.Color = claWhite
+      Size.Width = 320.000000000000000000
+      Size.Height = 400.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object Label1: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 51.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Valor Atual'
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 104.000000000000000000
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Desconto'
+        TabOrder = 2
+      end
+      object lblResumo: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 170.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Valor sem desconto: R$ 47,00'
+        TabOrder = 3
+      end
+      object lblPorcentagem: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 250.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Desconto: -R$ 0,00'
+        TabOrder = 4
+      end
+      object lblValorDesconto: TLabel
+        StyledSettings = [Family]
+        Position.X = 24.000000000000000000
+        Position.Y = 210.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claRed
+        Text = 'Desconto: -R$ 0,00'
+        TabOrder = 5
+      end
+      object lblValorFinal: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 24.000000000000000000
+        Position.Y = 290.000000000000000000
+        Size.Width = 288.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = claGreen
+        Text = 'Valor final com desconto: R$ 00,00'
+        TabOrder = 6
+      end
+      object edtValorAtual: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        StyleLookup = 'editstyle'
+        TabOrder = 7
+        ReadOnly = True
+        Position.X = 24.000000000000000000
+        Position.Y = 74.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtDesconto: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 8
+        Text = '0'
+        Position.X = 24.000000000000000000
+        Position.Y = 129.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = edtDescontoChange
+        OnChangeTracking = edtDescontoChange
+      end
+      object btnConfirmar: TRectangle
+        Fill.Color = claCornflowerblue
+        Position.X = 8.000000000000000000
+        Position.Y = 368.000000000000000000
+        Size.Width = 140.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        OnClick = btnConfirmarClick
+        object Label3: TLabel
+          Align = Center
+          StyledSettings = [Family, Size]
+          Size.Width = 130.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Confirmar'
+          TabOrder = 0
+        end
+      end
+      object btnCancelar: TRectangle
+        Fill.Color = claFirebrick
+        Position.X = 172.000000000000000000
+        Position.Y = 368.000000000000000000
+        Size.Width = 140.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        OnClick = btnCancelarClick
+        object Label4: TLabel
+          Align = Center
+          StyledSettings = [Family, Size]
+          Size.Width = 130.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Cancelar'
+          TabOrder = 0
+        end
+      end
+      object Label5: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Ajustar valores dos m'#243'dulos'
+        TabOrder = 0
+      end
+      object btnFecharX: TSpeedButton
+        StyledSettings = []
+        Position.X = 284.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 31.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'X'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claCrimson
+        TextSettings.Trimming = None
+        OnClick = btnFecharXClick
+      end
+    end
+  end
+end

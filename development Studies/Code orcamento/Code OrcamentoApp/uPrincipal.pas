@@ -13,7 +13,6 @@ type
     VertScrollBox1: TVertScrollBox;
     lblTotal: TLabel;
 
-    // --- SEUS LAYOUTS ---
     MesaLayout: TLayout;
     LayoutEntrega: TLayout;
     LayoutFiscal: TLayout;
@@ -29,7 +28,6 @@ type
     LayoutGerenceRep: TLayout;
     LayoutQtdTerminais: TLayout;
 
-    // --- SEUS CHECKBOXES ---
     chkMesa: TCheckBox;
     chkEntrega: TCheckBox;
     chkFiscal: TCheckBox;
@@ -44,7 +42,6 @@ type
     chkDeliveryDireto: TCheckBox;
     chkGerenceRep: TCheckBox;
 
-    // --- SEUS LABELS DE PREÇO ATUAL (Verde/Preto) ---
     lblValorMB: TLabel;
     lblValorE: TLabel;
     lblValorFiscal: TLabel;
@@ -59,8 +56,6 @@ type
     lblValorDD: TLabel;
     lblValorGRep: TLabel;
 
-    // --- SEUS LABELS DE PREÇO ANTIGO (Vermelho Riscado) ---
-    // Você acabou de criar estes no Design!
     lblAntigoMesa: TLabel;
     lblAntigoEntrega: TLabel;
     lblAntigoFiscal: TLabel;
@@ -75,13 +70,11 @@ type
     lblAntigoDD: TLabel;
     lblAntigoGRep: TLabel;
 
-    // --- TERMINAL ---
     lblQtdTerminais: TLabel;
     lblValorT: TLabel;
     btnMenos: TRectangle;
     btnMais: TRectangle;
 
-    // --- EVENTOS ---
     procedure FormCreate(Sender: TObject);
     procedure CalcularEvent(Sender: TObject);
     procedure btnMaisClick(Sender: TObject);
@@ -97,8 +90,8 @@ type
       VALOR_EXTRA = 17.00;
 
     function TextoParaValor(Texto: String): Currency;
-    function GetValorTabela(TagID: Integer): Currency; // Preço Original Fixo
-    function GetLabelAntigo(TagID: Integer): TLabel;   // Acha o label vermelho certo
+    function GetValorTabela(TagID: Integer): Currency;
+    function GetLabelAntigo(TagID: Integer): TLabel;
     procedure InicializarPrecos;
     procedure CalcularTudo;
   public
@@ -119,17 +112,15 @@ begin
   if Texto = '' then Result := 0 else Result := StrToCurrDef(Texto, 0);
 end;
 
-// TABELA DE PREÇOS FIXA (O preço "Cheio")
 function TForm1.GetValorTabela(TagID: Integer): Currency;
 begin
   case TagID of
-    1, 2, 12: Result := 17.00;  // Itens de 17 reais
-    7..11:    Result := 27.00;  // Itens de 27 reais
-    else      Result := 47.00;  // O resto é 47 reais
+    1, 2, 12: Result := 17.00;
+    7..11:    Result := 27.00;
+    else      Result := 47.00;
   end;
 end;
 
-// FUNÇÃO MÁGICA: Retorna o Label Vermelho correspondente ao ID
 function TForm1.GetLabelAntigo(TagID: Integer): TLabel;
 begin
   Result := nil;
@@ -193,7 +184,6 @@ begin
   lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', Total);
 end;
 
-// CLIQUE NO PREÇO (LÓGICA AUTOMÁTICA PARA TODOS)
 procedure TForm1.LabelPrecoClick(Sender: TObject);
 var
   LblAtual, LblAntigo: TLabel;
@@ -204,16 +194,14 @@ begin
   TagID := LblAtual.Tag;
   if TagID = 0 then Exit;
 
-  // 1. Identifica quem é quem
   ValorTabela := GetValorTabela(TagID);
   ValorJaComDesconto := PrecosAtuais[TagID];
-  LblAntigo := GetLabelAntigo(TagID); // Busca o label vermelho certo
+  LblAntigo := GetLabelAntigo(TagID);
 
   FrmDesconto := TFrmDesconto.Create(Application);
   try
     FrmDesconto.ValorOriginal := ValorTabela;
 
-    // Calcula desconto prévio
     DifDesconto := ValorTabela - ValorJaComDesconto;
     if DifDesconto > 0.01 then
        FrmDesconto.edtDesconto.Text := FloatToStr(DifDesconto)
@@ -224,13 +212,11 @@ begin
     begin
       PrecosAtuais[TagID] := FrmDesconto.ValorFinal;
 
-      // Atualiza Texto Verde/Preto
       LblAtual.Text := FormatFloat('R$ #,##0.00', PrecosAtuais[TagID]);
 
       // --- LÓGICA VISUAL ---
       if PrecosAtuais[TagID] < ValorTabela then
       begin
-        // TEVE DESCONTO: Verde + Mostra Riscado
         LblAtual.TextSettings.FontColor := TAlphaColors.Green;
 
         if Assigned(LblAntigo) then
@@ -238,7 +224,6 @@ begin
       end
       else
       begin
-        // PREÇO NORMAL: Preto + Esconde Riscado
         LblAtual.TextSettings.FontColor := TAlphaColors.Black;
 
         if Assigned(LblAntigo) then
@@ -260,7 +245,6 @@ begin
   FQtdTerminais := 3;
   InicializarPrecos;
 
-  // Garante que TODOS os riscados comecem escondidos
   for i := 1 to 13 do
   begin
     Lbl := GetLabelAntigo(i);

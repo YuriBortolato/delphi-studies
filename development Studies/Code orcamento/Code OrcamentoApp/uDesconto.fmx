@@ -15,13 +15,13 @@ object FrmDesconto: TFrmDesconto
   FormFactor.Devices = [Desktop]
   OnShow = FormShow
   DesignerMasterStyle = 0
-  object rectFundo: TLayout
+  object LayoutContainer: TLayout
     Align = Center
     Size.Width = 331.000000000000000000
     Size.Height = 437.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    object Rectangle2: TRectangle
+    object rectFundo: TRectangle
       Align = Center
       Fill.Color = claWhite
       Size.Width = 320.000000000000000000
@@ -176,7 +176,7 @@ object FrmDesconto: TFrmDesconto
         Text = 'Ajustar valores dos m'#243'dulos'
         TabOrder = 0
       end
-      object SpeedButton1: TSpeedButton
+      object btnFecharX: TSpeedButton
         StyledSettings = []
         Position.X = 284.000000000000000000
         Position.Y = 5.000000000000000000
@@ -188,6 +188,7 @@ object FrmDesconto: TFrmDesconto
         TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claCrimson
         TextSettings.Trimming = None
+        OnClick = btnFecharXClick
       end
     end
   end
