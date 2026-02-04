@@ -57,7 +57,7 @@ begin
   edtValorAtual.Text := FormatFloat('#,##0.00', FValorOriginal);
   lblResumo.Text := 'Valor sem desconto: ' + FormatFloat('R$ #,##0.00', FValorOriginal);
 
-
+  // Força o cálculo inicial para atualizar cores e textos
   edtDescontoChange(Self);
   edtDesconto.SetFocus;
 end;
@@ -112,4 +112,3 @@ begin
 end;
 
 end.
-

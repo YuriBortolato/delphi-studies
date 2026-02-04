@@ -185,14 +185,13 @@ begin
 end;
 
 // ============================================================================
-// CORREÇÃO DO CRASH NO ANDROID (USO DE VARIÁVEL LOCAL LForm)
+// AQUI ESTÁ A MUDANÇA PRINCIPAL PARA O ANDROID
 // ============================================================================
 procedure TForm1.LabelPrecoClick(Sender: TObject);
 var
   LblAtual, LblAntigo: TLabel;
   TagID: Integer;
   ValorTabela, ValorJaComDesconto, DifDesconto: Currency;
-  LForm: TFrmDesconto; // <--- O Segredo: Variável Local
 begin
   LblAtual := Sender as TLabel;
   TagID := LblAtual.Tag;
@@ -202,26 +201,24 @@ begin
   ValorJaComDesconto := PrecosAtuais[TagID];
   LblAntigo := GetLabelAntigo(TagID);
 
-  // 1. Criamos usando a variável LOCAL
-  LForm := TFrmDesconto.Create(nil);
+  // Cria o formulário
+  FrmDesconto := TFrmDesconto.Create(Application);
 
-  // 2. Passamos os valores para LForm (não para FrmDesconto global)
-  LForm.ValorOriginal := ValorTabela;
-
+  // Configura os valores ANTES de mostrar
+  FrmDesconto.ValorOriginal := ValorTabela;
   DifDesconto := ValorTabela - ValorJaComDesconto;
   if DifDesconto > 0.01 then
-     LForm.edtDesconto.Text := FloatToStr(DifDesconto)
+     FrmDesconto.edtDesconto.Text := FloatToStr(DifDesconto)
   else
-     LForm.edtDesconto.Text := '';
+     FrmDesconto.edtDesconto.Text := '';
 
-  // 3. Chamamos o ShowModal na variável local
-  LForm.ShowModal(procedure(ModalResult: TModalResult)
+  // CHAMADA ESPECIAL PARA ANDROID (Não trava o app)
+  FrmDesconto.ShowModal(procedure(ModalResult: TModalResult)
   begin
+    // Esse código roda só quando a janela fechar
     if ModalResult = mrOk then
     begin
-      // Usamos LForm para pegar o valor de volta
-      PrecosAtuais[TagID] := LForm.ValorFinal;
-
+      PrecosAtuais[TagID] := FrmDesconto.ValorFinal;
       LblAtual.Text := FormatFloat('R$ #,##0.00', PrecosAtuais[TagID]);
 
       // Lógica Visual
@@ -239,8 +236,8 @@ begin
       CalcularTudo;
     end;
 
-    // 4. Destruição segura da variável local
-    LForm.DisposeOf;
+    // Destrói o formulário da memória
+    FrmDesconto.DisposeOf;
   end);
 end;
 
