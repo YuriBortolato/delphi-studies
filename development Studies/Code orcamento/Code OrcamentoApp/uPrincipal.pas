@@ -184,6 +184,9 @@ begin
   lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', Total);
 end;
 
+// ============================================================================
+// AQUI ESTÁ A MUDANÇA PRINCIPAL PARA O ANDROID
+// ============================================================================
 procedure TForm1.LabelPrecoClick(Sender: TObject);
 var
   LblAtual, LblAntigo: TLabel;
@@ -198,43 +201,44 @@ begin
   ValorJaComDesconto := PrecosAtuais[TagID];
   LblAntigo := GetLabelAntigo(TagID);
 
+  // Cria o formulário
   FrmDesconto := TFrmDesconto.Create(Application);
-  try
-    FrmDesconto.ValorOriginal := ValorTabela;
 
-    DifDesconto := ValorTabela - ValorJaComDesconto;
-    if DifDesconto > 0.01 then
-       FrmDesconto.edtDesconto.Text := FloatToStr(DifDesconto)
-    else
-       FrmDesconto.edtDesconto.Text := '';
+  // Configura os valores ANTES de mostrar
+  FrmDesconto.ValorOriginal := ValorTabela;
+  DifDesconto := ValorTabela - ValorJaComDesconto;
+  if DifDesconto > 0.01 then
+     FrmDesconto.edtDesconto.Text := FloatToStr(DifDesconto)
+  else
+     FrmDesconto.edtDesconto.Text := '';
 
-    if FrmDesconto.ShowModal = mrOk then
+  // CHAMADA ESPECIAL PARA ANDROID (Não trava o app)
+  FrmDesconto.ShowModal(procedure(ModalResult: TModalResult)
+  begin
+    // Esse código roda só quando a janela fechar
+    if ModalResult = mrOk then
     begin
       PrecosAtuais[TagID] := FrmDesconto.ValorFinal;
-
       LblAtual.Text := FormatFloat('R$ #,##0.00', PrecosAtuais[TagID]);
 
-      // --- LÓGICA VISUAL ---
+      // Lógica Visual
       if PrecosAtuais[TagID] < ValorTabela then
       begin
         LblAtual.TextSettings.FontColor := TAlphaColors.Green;
-
-        if Assigned(LblAntigo) then
-           LblAntigo.Visible := True;
+        if Assigned(LblAntigo) then LblAntigo.Visible := True;
       end
       else
       begin
         LblAtual.TextSettings.FontColor := TAlphaColors.Black;
-
-        if Assigned(LblAntigo) then
-           LblAntigo.Visible := False;
+        if Assigned(LblAntigo) then LblAntigo.Visible := False;
       end;
 
       CalcularTudo;
     end;
-  finally
-    FrmDesconto.Free;
-  end;
+
+    // Destrói o formulário da memória
+    FrmDesconto.DisposeOf;
+  end);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
