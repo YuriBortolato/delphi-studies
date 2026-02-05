@@ -184,15 +184,12 @@ begin
   lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', Total);
 end;
 
-// ============================================================================
-// CORREÇÃO DO CRASH NO ANDROID (USO DE VARIÁVEL LOCAL LForm)
-// ============================================================================
 procedure TForm1.LabelPrecoClick(Sender: TObject);
 var
   LblAtual, LblAntigo: TLabel;
   TagID: Integer;
   ValorTabela, ValorJaComDesconto, DifDesconto: Currency;
-  LForm: TFrmDesconto; // <--- O Segredo: Variável Local
+  LForm: TFrmDesconto;
 begin
   LblAtual := Sender as TLabel;
   TagID := LblAtual.Tag;
@@ -202,10 +199,8 @@ begin
   ValorJaComDesconto := PrecosAtuais[TagID];
   LblAntigo := GetLabelAntigo(TagID);
 
-  // 1. Criamos usando a variável LOCAL
   LForm := TFrmDesconto.Create(nil);
 
-  // 2. Passamos os valores para LForm (não para FrmDesconto global)
   LForm.ValorOriginal := ValorTabela;
 
   DifDesconto := ValorTabela - ValorJaComDesconto;
@@ -214,17 +209,14 @@ begin
   else
      LForm.edtDesconto.Text := '';
 
-  // 3. Chamamos o ShowModal na variável local
   LForm.ShowModal(procedure(ModalResult: TModalResult)
   begin
     if ModalResult = mrOk then
     begin
-      // Usamos LForm para pegar o valor de volta
       PrecosAtuais[TagID] := LForm.ValorFinal;
 
       LblAtual.Text := FormatFloat('R$ #,##0.00', PrecosAtuais[TagID]);
 
-      // Lógica Visual
       if PrecosAtuais[TagID] < ValorTabela then
       begin
         LblAtual.TextSettings.FontColor := TAlphaColors.Green;
@@ -239,8 +231,10 @@ begin
       CalcularTudo;
     end;
 
-    // 4. Destruição segura da variável local
-    LForm.DisposeOf;
+    TThread.ForceQueue(nil, procedure
+    begin
+      LForm.DisposeOf;
+    end);
   end);
 end;
 
