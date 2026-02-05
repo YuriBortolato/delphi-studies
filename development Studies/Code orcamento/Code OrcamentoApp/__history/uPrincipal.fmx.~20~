@@ -55,7 +55,7 @@ object Form1: TForm1
         object lblValorMB: TLabel
           Tag = 1
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -77,6 +77,19 @@ object Form1: TForm1
           Text = 'Mesa e Balc'#227'o'
           TextSettings.Font.Size = 14.000000000000000000
           OnChange = CalcularEvent
+        end
+        object lblAntigoMesa: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 17,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -107,7 +120,7 @@ object Form1: TForm1
         end
         object lblValorE: TLabel
           Tag = 2
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -118,6 +131,19 @@ object Form1: TForm1
           Text = 'R$ 17,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoEntrega: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 17,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -149,7 +175,7 @@ object Form1: TForm1
         object lblValorFiscal: TLabel
           Tag = 3
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -160,6 +186,19 @@ object Form1: TForm1
           Text = 'R$ 47,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoFiscal: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 47,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -191,7 +230,7 @@ object Form1: TForm1
         object lblValorGP: TLabel
           Tag = 4
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -202,6 +241,19 @@ object Form1: TForm1
           Text = 'R$ 47,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoGP: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 47,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -233,7 +285,7 @@ object Form1: TForm1
         object lblValorWpp: TLabel
           Tag = 5
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -244,6 +296,19 @@ object Form1: TForm1
           Text = 'R$ 47,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoWpp: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 47,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -275,7 +340,7 @@ object Form1: TForm1
         object lblValorCA: TLabel
           Tag = 6
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -286,6 +351,19 @@ object Form1: TForm1
           Text = 'R$ 47,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoCA: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 47,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -317,7 +395,7 @@ object Form1: TForm1
         object lblValorFinanceiro: TLabel
           Tag = 7
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -328,6 +406,19 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoFin: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -359,7 +450,7 @@ object Form1: TForm1
         object lblValorDRE: TLabel
           Tag = 8
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -370,6 +461,19 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoDRE: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -401,7 +505,7 @@ object Form1: TForm1
         object lblValorDash: TLabel
           Tag = 9
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -412,6 +516,19 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoDash: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -443,7 +560,7 @@ object Form1: TForm1
         object lblValorFood: TLabel
           Tag = 10
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -454,6 +571,19 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoIfood: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -485,7 +615,7 @@ object Form1: TForm1
         object lblValorFome: TLabel
           Tag = 11
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -496,6 +626,19 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoFome: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -527,7 +670,7 @@ object Form1: TForm1
         object lblValorDD: TLabel
           Tag = 12
           Align = Right
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Size.Width = 137.000000000000000000
@@ -538,6 +681,19 @@ object Form1: TForm1
           Text = 'R$ 17,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoDD: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 17,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end
@@ -568,7 +724,7 @@ object Form1: TForm1
         end
         object lblValorGRep: TLabel
           Tag = 13
-          StyledSettings = [Family, Size, FontColor]
+          StyledSettings = [Family, Size]
           HitTest = True
           Position.X = 175.000000000000000000
           Position.Y = 1.000000000000000000
@@ -580,6 +736,19 @@ object Form1: TForm1
           Text = 'R$ 47,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
+        end
+        object lblAntigoGRep: TLabel
+          StyledSettings = [Family, Size]
+          Position.X = 208.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 47,00'
+          Visible = False
+          TabOrder = 2
         end
       end
     end

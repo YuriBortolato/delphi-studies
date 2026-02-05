@@ -57,8 +57,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -79,10 +79,11 @@ object Form1: TForm1
           OnChange = CalcularEvent
         end
         object lblAntigoMesa: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -120,11 +121,12 @@ object Form1: TForm1
         end
         object lblValorE: TLabel
           Tag = 2
+          Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
-          Size.Height = 49.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
           TextSettings.HorzAlign = Trailing
@@ -133,10 +135,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoEntrega: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 3.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -177,8 +180,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -188,10 +191,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoFiscal: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -232,8 +236,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -243,10 +247,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoGP: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -287,8 +292,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -298,10 +303,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoWpp: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -342,8 +348,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -353,10 +359,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoCA: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -392,13 +399,26 @@ object Form1: TForm1
           TextSettings.Font.Size = 14.000000000000000000
           OnChange = CalcularEvent
         end
+        object lblAntigoFin: TLabel
+          Align = Right
+          StyledSettings = [Family, Size]
+          Position.X = 202.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claRed
+          Text = 'R$ 27,00'
+          Visible = False
+          TabOrder = 2
+        end
         object lblValorFinanceiro: TLabel
           Tag = 7
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -406,19 +426,6 @@ object Form1: TForm1
           Text = 'R$ 27,00'
           TabOrder = 1
           OnClick = LabelPrecoClick
-        end
-        object lblAntigoFin: TLabel
-          StyledSettings = [Family, Size]
-          Position.X = 208.000000000000000000
-          Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
-          Size.Height = 48.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.StyleExt = {08040000000000000004000000}
-          TextSettings.FontColor = claRed
-          Text = 'R$ 27,00'
-          Visible = False
-          TabOrder = 2
         end
       end
     end
@@ -452,8 +459,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -463,10 +470,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoDRE: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -507,8 +515,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -518,11 +526,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoDash: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
-          Position.X = 208.000000000000000000
-          Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
-          Size.Height = 48.000000000000000000
+          Position.X = 202.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
           TextSettings.FontColor = claRed
@@ -562,8 +570,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -573,10 +581,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoIfood: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -617,8 +626,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -628,10 +637,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoFome: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
           Position.X = 208.000000000000000000
           Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
@@ -672,8 +682,8 @@ object Form1: TForm1
           Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Size.Width = 137.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -683,11 +693,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoDD: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
-          Position.X = 208.000000000000000000
-          Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
-          Size.Height = 48.000000000000000000
+          Position.X = 202.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
           TextSettings.FontColor = claRed
@@ -724,12 +734,12 @@ object Form1: TForm1
         end
         object lblValorGRep: TLabel
           Tag = 13
+          Align = Right
           StyledSettings = [Family, Size]
           HitTest = True
-          Position.X = 175.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 137.000000000000000000
-          Size.Height = 49.000000000000000000
+          Position.X = 252.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00070000000000000004000000}
           TextSettings.HorzAlign = Trailing
@@ -738,11 +748,11 @@ object Form1: TForm1
           OnClick = LabelPrecoClick
         end
         object lblAntigoGRep: TLabel
+          Align = Right
           StyledSettings = [Family, Size]
-          Position.X = 208.000000000000000000
-          Position.Y = 2.000000000000000000
-          Size.Width = 104.000000000000000000
-          Size.Height = 48.000000000000000000
+          Position.X = 202.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {08040000000000000004000000}
           TextSettings.FontColor = claRed
