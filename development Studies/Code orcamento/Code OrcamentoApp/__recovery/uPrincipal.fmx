@@ -57,7 +57,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox1: TCheckBox
+            object chkMesa: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -84,7 +84,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox2: TCheckBox
+            object chkEntrega: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -111,7 +111,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox3: TCheckBox
+            object chkFiscal: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -138,7 +138,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox4: TCheckBox
+            object chkGerencePlus: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -165,7 +165,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox5: TCheckBox
+            object chkWhatsapp: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -192,7 +192,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox6: TCheckBox
+            object chkComeraqui: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -219,7 +219,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox7: TCheckBox
+            object chkFinanceiro: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -246,7 +246,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox8: TCheckBox
+            object chkDre: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -273,7 +273,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox9: TCheckBox
+            object chkDashboard: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -300,7 +300,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox10: TCheckBox
+            object chkIfood: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -327,7 +327,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox11: TCheckBox
+            object chkAiqfome: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -354,7 +354,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object CheckBox12: TCheckBox
+            object chkDeliveryDireto: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -387,7 +387,7 @@
               Size.Height = 50.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
-              object Rectangle2: TRectangle
+              object btnMenos: TRectangle
                 Align = Left
                 Fill.Color = claGray
                 Margins.Left = 10.000000000000000000
@@ -430,7 +430,7 @@
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
                 OnClick = btnMaisClick
-                object Label6: TLabel
+                object btnMais: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
                   Size.Width = 27.000000000000000000
@@ -443,7 +443,7 @@
                   TabOrder = 0
                 end
               end
-              object Label8: TLabel
+              object lblQtdTerminais: TLabel
                 Align = Center
                 StyledSettings = [Family, FontColor]
                 Size.Width = 51.000000000000000000
@@ -512,7 +512,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object chkFiscal: TCheckBox
+            object chkFiscalGerencial: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -539,7 +539,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object chkFinanceiro: TCheckBox
+            object chkFinanceiroGerencial: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -566,7 +566,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object chkDre: TCheckBox
+            object chkDreGerencial: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -593,7 +593,7 @@
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            object chkDashboard: TCheckBox
+            object chkDashboardGerencial: TCheckBox
               Align = Center
               StyledSettings = [Family, FontColor]
               Size.Width = 161.000000000000000000
@@ -653,7 +653,7 @@
               Size.Height = 50.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
-              object Rectangle4: TRectangle
+              object btnMenosGerencial: TRectangle
                 Align = Left
                 Fill.Color = claGray
                 Margins.Left = 10.000000000000000000
@@ -681,7 +681,7 @@
                   TabOrder = 0
                 end
               end
-              object Rectangle5: TRectangle
+              object btnMaisGerencial: TRectangle
                 Align = Right
                 Fill.Color = claCornflowerblue
                 Margins.Left = 10.000000000000000000
@@ -709,7 +709,7 @@
                   TabOrder = 0
                 end
               end
-              object lblQtdTerminais_Ger: TLabel
+              object lblQtdTerminaisGerencial: TLabel
                 Align = Center
                 StyledSettings = [Family, FontColor]
                 Size.Width = 51.000000000000000000
