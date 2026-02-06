@@ -13,7 +13,7 @@ type
     TabControl1: TTabControl;
     Rectangle1: TRectangle;
     lblTotal: TLabel;
-    TabGastronômico: TTabItem;
+    TabGastronÃ´mico: TTabItem;
     TabGerencial: TTabItem;
     VertScrollBox1: TVertScrollBox;
     Layout3: TLayout;
@@ -195,7 +195,7 @@ begin
   if chkDeliveryDireto.IsChecked then Total := Total + PrecosAtuais[12];
   if chkGerenceRep.IsChecked     then Total := Total + PrecosAtuais[13];
 
-  lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', Total);
+  lblTotal.Text := FormatFloat('R$ #,##0.00 | mÃªs', Total);
 end;
 
 procedure TForm1.LabelPrecoClick(Sender: TObject);
