@@ -12,14 +12,13 @@ type
   TForm1 = class(TForm)
     lblTotal: TLabel;
     TabControl1: TTabControl;
-
-    // NOMES IMPORTANTES (Confira no Design!)
-    TabGastronomico: TTabItem;
     TabGerencial: TTabItem;
+
+    // --- SCROLLBOXES (Renomeie no Design se der erro!) ---
     VertScrollBoxGastro: TVertScrollBox;
     VertScrollBoxGerencial: TVertScrollBox;
 
-    // --- COMPONENTES GASTRONÔMICO ---
+    // --- COMPONENTES GASTRONÔMICO (Só Checkboxes) ---
     chkMesa: TCheckBox;
     chkEntrega: TCheckBox;
     chkFiscal: TCheckBox;
@@ -34,10 +33,10 @@ type
     chkDeliveryDireto: TCheckBox;
 
     lblQtdTerminais: TLabel;
-    btnMenos: TRectangle; // Tem que ser o Retângulo!
-    btnMais: TRectangle;  // Tem que ser o Retângulo!
+    btnMenos: TRectangle;
+    btnMais: TLabel;
 
-    // --- COMPONENTES GERENCIAL ---
+    // --- COMPONENTES GERENCIAL (Só Checkboxes) ---
     chkFiscalGerencial: TCheckBox;
     chkFinanceiroGerencial: TCheckBox;
     chkDreGerencial: TCheckBox;
@@ -78,7 +77,9 @@ implementation
 
 {$R *.fmx}
 
+// ============================================================================
 // CONFIGURAÇÕES DE PREÇOS
+// ============================================================================
 const
   BASE_GASTRO = 127.00;
   MIN_TERM_GASTRO = 3;
@@ -99,10 +100,7 @@ begin
   if Assigned(lblQtdTerminaisGerencial) then
     lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
 
-  // Garante que a aba existe antes de ativar
-  if Assigned(TabGastronomico) then
-    TabControl1.ActiveTab := TabGastronomico;
-
+  TabControl1.ActiveTab := TabGastronomico;
   CalcularTudo;
 end;
 
@@ -110,8 +108,7 @@ procedure TForm1.CalcularTudo;
 var
   TotalFinal: Currency;
 begin
-  // Verifica se estamos na aba Gerencial
-  if (TabControl1.ActiveTab = TabGerencial) then
+  if TabControl1.ActiveTab = TabGerencial then
     TotalFinal := CalcularGerencial
   else
     TotalFinal := CalcularGastronomico;
@@ -158,6 +155,7 @@ begin
   else
     Total := BASE_GERENCIAL + ((FQtdTerminaisGerencial - MIN_TERM_GERENCIAL) * VALOR_EXTRA_TERMINAL);
 
+  // Note: Usando Assigned para evitar erro se o componente não existir (segurança extra)
   if Assigned(chkFiscalGerencial) and chkFiscalGerencial.IsChecked     then Total := Total + 47.00;
   if Assigned(chkFinanceiroGerencial) and chkFinanceiroGerencial.IsChecked then Total := Total + 27.00;
   if Assigned(chkDreGerencial) and chkDreGerencial.IsChecked        then Total := Total + 27.00;
@@ -180,8 +178,7 @@ end;
 procedure TForm1.btnMaisClick(Sender: TObject);
 begin
   Inc(FQtdTerminaisGastro);
-  if Assigned(lblQtdTerminais) then
-    lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+  lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
   CalcularTudo;
 end;
 
@@ -190,8 +187,7 @@ begin
   if FQtdTerminaisGastro > MIN_TERM_GASTRO then
   begin
     Dec(FQtdTerminaisGastro);
-    if Assigned(lblQtdTerminais) then
-      lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+    lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
     CalcularTudo;
   end;
 end;
@@ -199,8 +195,7 @@ end;
 procedure TForm1.btnMaisGerencialClick(Sender: TObject);
 begin
   Inc(FQtdTerminaisGerencial);
-  if Assigned(lblQtdTerminaisGerencial) then
-    lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
+  lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
   CalcularTudo;
 end;
 
@@ -209,8 +204,7 @@ begin
   if FQtdTerminaisGerencial > MIN_TERM_GERENCIAL then
   begin
     Dec(FQtdTerminaisGerencial);
-    if Assigned(lblQtdTerminaisGerencial) then
-       lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
+    lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
     CalcularTudo;
   end;
 end;

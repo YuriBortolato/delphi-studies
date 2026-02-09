@@ -1,4 +1,4 @@
-object Form1: TForm1
+﻿object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
@@ -23,7 +23,7 @@ object Form1: TForm1
       564s
       982s
       564s)
-    object TabGastronomico: TTabItem
+    object TabGastronômico: TTabItem
       CustomIcon = <
         item
         end>
@@ -35,9 +35,7 @@ object Form1: TForm1
       StyleLookup = ''
       TabOrder = 0
       Text = 'Gastron'#244'mico'
-      ExplicitSize.cx = 95.000000000000000000
-      ExplicitSize.cy = 26.000000000000000000
-      object VertScrollBoxGastro: TVertScrollBox
+      object VertScrollBox2: TVertScrollBox
         Tag = 1
         Align = Client
         Size.Width = 982.000000000000000000
@@ -404,7 +402,7 @@ object Form1: TForm1
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
                 OnClick = btnMenosClick
-                object lblSinalMenos: TLabel
+                object Label5: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
                   Size.Width = 28.000000000000000000
@@ -417,7 +415,7 @@ object Form1: TForm1
                   TabOrder = 0
                 end
               end
-              object btnMais: TRectangle
+              object Rectangle3: TRectangle
                 Align = Right
                 Fill.Color = claCornflowerblue
                 Margins.Left = 10.000000000000000000
@@ -432,7 +430,7 @@ object Form1: TForm1
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
                 OnClick = btnMaisClick
-                object lblSinalMais: TLabel
+                object btnMais: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
                   Size.Width = 27.000000000000000000
@@ -492,9 +490,7 @@ object Form1: TForm1
       StyleLookup = ''
       TabOrder = 0
       Text = 'Gerencial'
-      ExplicitSize.cx = 70.000000000000000000
-      ExplicitSize.cy = 26.000000000000000000
-      object VertScrollBoxGerencial: TVertScrollBox
+      object VertScrollBox1: TVertScrollBox
         Tag = 1
         Align = Client
         Size.Width = 982.000000000000000000
@@ -672,7 +668,7 @@ object Form1: TForm1
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
                 OnClick = btnMenosClick
-                object lblSinalMenosGerencial: TLabel
+                object Label1: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
                   Size.Width = 28.000000000000000000
@@ -700,7 +696,7 @@ object Form1: TForm1
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
                 OnClick = btnMaisClick
-                object lblSinalMaisGerencial: TLabel
+                object Label2: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
                   Size.Width = 27.000000000000000000

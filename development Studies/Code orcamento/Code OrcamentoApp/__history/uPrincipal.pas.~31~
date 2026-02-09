@@ -12,9 +12,6 @@ type
   TForm1 = class(TForm)
     lblTotal: TLabel;
     TabControl1: TTabControl;
-
-    // NOMES IMPORTANTES (Confira no Design!)
-    TabGastronomico: TTabItem;
     TabGerencial: TTabItem;
     VertScrollBoxGastro: TVertScrollBox;
     VertScrollBoxGerencial: TVertScrollBox;
@@ -78,7 +75,9 @@ implementation
 
 {$R *.fmx}
 
+// ============================================================================
 // CONFIGURAÇÕES DE PREÇOS
+// ============================================================================
 const
   BASE_GASTRO = 127.00;
   MIN_TERM_GASTRO = 3;

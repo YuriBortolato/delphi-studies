@@ -12,9 +12,6 @@ type
   TForm1 = class(TForm)
     lblTotal: TLabel;
     TabControl1: TTabControl;
-
-    // NOMES IMPORTANTES (Confira no Design!)
-    TabGastronomico: TTabItem;
     TabGerencial: TTabItem;
     VertScrollBoxGastro: TVertScrollBox;
     VertScrollBoxGerencial: TVertScrollBox;
@@ -34,8 +31,8 @@ type
     chkDeliveryDireto: TCheckBox;
 
     lblQtdTerminais: TLabel;
-    btnMenos: TRectangle; // Tem que ser o Retângulo!
-    btnMais: TRectangle;  // Tem que ser o Retângulo!
+    btnMenos: TRectangle;
+    lblSinalMais: TLabel;  // Tem que ser o Retângulo!
 
     // --- COMPONENTES GERENCIAL ---
     chkFiscalGerencial: TCheckBox;
@@ -78,7 +75,9 @@ implementation
 
 {$R *.fmx}
 
+// ============================================================================
 // CONFIGURAÇÕES DE PREÇOS
+// ============================================================================
 const
   BASE_GASTRO = 127.00;
   MIN_TERM_GASTRO = 3;
