@@ -15,7 +15,7 @@ object Form1: TForm1
     Size.Width = 984.000000000000000000
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 13
     TabPosition = PlatformDefault
     OnChange = TabControl1Change
@@ -29,7 +29,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 95.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -514,7 +514,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 70.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False

@@ -1,0 +1,5 @@
+platform select remote-android
+platform connect unix-abstract-connect:///data/local/tmp/debug.sock device=24604e357d7c
+settings set plugin.jit-loader.gdb.enable off
+process attach -pid=5169
+target symbols add "C:\Users\notebookSuporte\Desktop\YURI\dephi - estudo\development Studies\Code orcamento\Code OrcamentoApp\Android64\Debug\Project1\debug\libProject1.so"
