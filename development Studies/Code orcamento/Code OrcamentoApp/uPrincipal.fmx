@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  ActiveControl = TabGerencial
   Caption = 'Form1'
   ClientHeight = 670
   ClientWidth = 984
@@ -16,7 +15,7 @@ object Form1: TForm1
     Size.Width = 984.000000000000000000
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 13
     TabPosition = PlatformDefault
     OnChange = TabControl1Change
@@ -30,7 +29,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 95.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -472,10 +471,12 @@ object Form1: TForm1
                 end
               end
               object lblQtdTerminais: TLabel
-                Align = Center
+                Align = Client
                 StyledSettings = [Family, FontColor]
-                Size.Width = 51.000000000000000000
-                Size.Height = 46.000000000000000000
+                Scale.X = 1.500000000000000000
+                Scale.Y = 1.500000000000000000
+                Size.Width = 35.333335876464840000
+                Size.Height = 33.333335876464840000
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 16.000000000000000000
                 TextSettings.HorzAlign = Center
@@ -491,10 +492,12 @@ object Form1: TForm1
               Size.PlatformDefault = False
               TabOrder = 3
               object Label7: TLabel
-                Align = Center
+                Align = Client
                 StyledSettings = [Family, FontColor]
-                Size.Width = 173.000000000000000000
-                Size.Height = 50.000000000000000000
+                Scale.X = 1.500000000000000000
+                Scale.Y = 1.500000000000000000
+                Size.Width = 107.333335876464800000
+                Size.Height = 33.333335876464840000
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 14.000000000000000000
                 TextSettings.HorzAlign = Center
@@ -511,7 +514,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 70.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -750,10 +753,12 @@ object Form1: TForm1
                 end
               end
               object lblQtdTerminaisGerencial: TLabel
-                Align = Center
+                Align = Client
                 StyledSettings = [Family, FontColor]
-                Size.Width = 51.000000000000000000
-                Size.Height = 46.000000000000000000
+                Scale.X = 1.500000000000000000
+                Scale.Y = 1.500000000000000000
+                Size.Width = 35.333335876464840000
+                Size.Height = 33.333335876464840000
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 16.000000000000000000
                 TextSettings.HorzAlign = Center
@@ -769,10 +774,12 @@ object Form1: TForm1
               Size.PlatformDefault = False
               TabOrder = 3
               object Label4: TLabel
-                Align = Center
+                Align = Client
                 StyledSettings = [Family, FontColor]
-                Size.Width = 173.000000000000000000
-                Size.Height = 50.000000000000000000
+                Scale.X = 1.500000000000000000
+                Scale.Y = 1.500000000000000000
+                Size.Width = 107.333335876464800000
+                Size.Height = 33.333335876464840000
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 14.000000000000000000
                 TextSettings.HorzAlign = Center
@@ -795,8 +802,10 @@ object Form1: TForm1
     object lblTotal: TLabel
       Align = Client
       StyledSettings = [Family]
-      Size.Width = 984.000000000000000000
-      Size.Height = 80.000000000000000000
+      Scale.X = 1.200000047683716000
+      Scale.Y = 1.200000047683716000
+      Size.Width = 820.000000000000000000
+      Size.Height = 66.666664123535160000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 20.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
