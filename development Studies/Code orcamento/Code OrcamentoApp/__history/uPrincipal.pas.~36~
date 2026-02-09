@@ -1,0 +1,275 @@
+unit uPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.Objects, FMX.TabControl,
+  uDesconto;
+
+type
+  TForm1 = class(TForm)
+    lblTotal: TLabel;
+    TabControl1: TTabControl;
+
+    // NOMES IMPORTANTES
+    TabGastronomico: TTabItem;
+    TabGerencial: TTabItem;
+    VertScrollBoxGastro: TVertScrollBox;
+    VertScrollBoxGerencial: TVertScrollBox;
+
+    // --- COMPONENTES GASTRONÔMICO ---
+    chkMesa: TCheckBox;
+    chkEntrega: TCheckBox;
+    chkFiscal: TCheckBox;
+    chkGerencePlus: TCheckBox;
+    chkWhatsapp: TCheckBox;
+    chkComeraqui: TCheckBox;
+    chkFinanceiro: TCheckBox;
+    chkDre: TCheckBox;
+    chkDashboard: TCheckBox;
+    chkIfood: TCheckBox;
+    chkAiqfome: TCheckBox;
+    chkDeliveryDireto: TCheckBox;
+
+    lblQtdTerminais: TLabel;
+    btnMenos: TRectangle;
+    btnMais: TRectangle;
+
+    // --- COMPONENTES GERENCIAL ---
+    chkFiscalGerencial: TCheckBox;
+    chkFinanceiroGerencial: TCheckBox;
+    chkDreGerencial: TCheckBox;
+    chkDashboardGerencial: TCheckBox;
+    chkGerenceRep: TCheckBox;
+
+    lblQtdTerminaisGerencial: TLabel;
+    btnMenosGerencial: TRectangle;
+    btnMaisGerencial: TRectangle;
+
+    // Eventos
+    procedure FormCreate(Sender: TObject);
+    procedure CalcularEvent(Sender: TObject);
+    procedure TabControl1Change(Sender: TObject);
+
+    // Botões Gastro
+    procedure btnMaisClick(Sender: TObject);
+    procedure btnMenosClick(Sender: TObject);
+
+    // Botões Gerencial
+    procedure btnMaisGerencialClick(Sender: TObject);
+    procedure btnMenosGerencialClick(Sender: TObject);
+
+    // NOVO: Clique no cabeçalho para dar desconto
+    procedure lblTotalClick(Sender: TObject);
+
+  private
+    FQtdTerminaisGastro: Integer;
+    FQtdTerminaisGerencial: Integer;
+    FValorDesconto: Currency;
+
+    procedure CalcularTudo;
+    function CalcularGastronomico: Currency;
+    function CalcularGerencial: Currency;
+  public
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+// CONFIGURAÇÕES DE PREÇOS
+const
+  BASE_GASTRO = 127.00;
+  MIN_TERM_GASTRO = 3;
+
+  BASE_GERENCIAL = 180.00;
+  MIN_TERM_GERENCIAL = 1;
+
+  VALOR_EXTRA_TERMINAL = 17.00;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FQtdTerminaisGastro := MIN_TERM_GASTRO;
+  FQtdTerminaisGerencial := MIN_TERM_GERENCIAL;
+  FValorDesconto := 0; // Começa sem desconto
+
+  if Assigned(lblQtdTerminais) then
+    lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+
+  if Assigned(lblQtdTerminaisGerencial) then
+    lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
+
+  if Assigned(TabGastronomico) then
+    TabControl1.ActiveTab := TabGastronomico;
+
+  CalcularTudo;
+end;
+
+procedure TForm1.CalcularTudo;
+var
+  SubTotal, TotalFinal: Currency;
+begin
+  // Calcula o valor cheio (SubTotal) dependendo da aba
+  if (TabControl1.ActiveTab = TabGerencial) then
+    SubTotal := CalcularGerencial
+  else
+    SubTotal := CalcularGastronomico;
+
+  // Abate o desconto global
+  TotalFinal := SubTotal - FValorDesconto;
+
+  // Segurança para não ficar negativo
+  if TotalFinal < 0 then TotalFinal := 0;
+
+  // Mostra na tela
+  if Assigned(lblTotal) then
+  begin
+    lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', TotalFinal);
+
+    // (Opcional) Se tiver desconto, pode mostrar um aviso visual
+    if FValorDesconto > 0 then
+      lblTotal.Text := lblTotal.Text + ' *';
+  end;
+end;
+
+procedure TForm1.lblTotalClick(Sender: TObject);
+var
+  LForm: TFrmDesconto;
+  ValorAtualSemDesconto: Currency;
+begin
+  // Descobre quanto deu a conta antes do desconto
+  if TabControl1.ActiveTab = TabGerencial then
+    ValorAtualSemDesconto := CalcularGerencial
+  else
+    ValorAtualSemDesconto := CalcularGastronomico;
+
+  LForm := TFrmDesconto.Create(nil);
+  try
+    LForm.ValorOriginal := ValorAtualSemDesconto;
+
+    // Se já tinha desconto aplicado, preenche o campo para o usuário ver
+    if FValorDesconto > 0 then
+       LForm.edtDesconto.Text := FloatToStr(FValorDesconto);
+
+    LForm.ShowModal(procedure(ModalResult: TModalResult)
+    begin
+      if ModalResult = mrOk then
+      begin
+        // A lógica do form retorna o Valor FINAL.
+        // Valor Cheio - Valor Final Desejado
+        FValorDesconto := ValorAtualSemDesconto - LForm.ValorFinal;
+
+        CalcularTudo;
+      end;
+
+      // Destruição segura para Android
+      TThread.ForceQueue(nil, procedure begin LForm.DisposeOf; end);
+    end);
+
+  except
+    LForm.DisposeOf;
+  end;
+end;
+
+function TForm1.CalcularGastronomico: Currency;
+var
+  Total: Currency;
+begin
+  Total := 0;
+
+  if FQtdTerminaisGastro <= MIN_TERM_GASTRO then
+    Total := BASE_GASTRO
+  else
+    Total := BASE_GASTRO + ((FQtdTerminaisGastro - MIN_TERM_GASTRO) * VALOR_EXTRA_TERMINAL);
+
+  if Assigned(chkMesa) and chkMesa.IsChecked           then Total := Total + 17.00;
+  if Assigned(chkEntrega) and chkEntrega.IsChecked     then Total := Total + 17.00;
+  if Assigned(chkFiscal) and chkFiscal.IsChecked       then Total := Total + 47.00;
+  if Assigned(chkGerencePlus) and chkGerencePlus.IsChecked then Total := Total + 47.00;
+  if Assigned(chkWhatsapp) and chkWhatsapp.IsChecked   then Total := Total + 47.00;
+  if Assigned(chkComeraqui) and chkComeraqui.IsChecked then Total := Total + 47.00;
+  if Assigned(chkFinanceiro) and chkFinanceiro.IsChecked then Total := Total + 27.00;
+  if Assigned(chkDre) and chkDre.IsChecked             then Total := Total + 27.00;
+  if Assigned(chkDashboard) and chkDashboard.IsChecked then Total := Total + 27.00;
+  if Assigned(chkIfood) and chkIfood.IsChecked         then Total := Total + 27.00;
+  if Assigned(chkAiqfome) and chkAiqfome.IsChecked     then Total := Total + 27.00;
+  if Assigned(chkDeliveryDireto) and chkDeliveryDireto.IsChecked then Total := Total + 17.00;
+
+  Result := Total;
+end;
+
+function TForm1.CalcularGerencial: Currency;
+var
+  Total: Currency;
+begin
+  Total := 0;
+
+  if FQtdTerminaisGerencial <= MIN_TERM_GERENCIAL then
+    Total := BASE_GERENCIAL
+  else
+    Total := BASE_GERENCIAL + ((FQtdTerminaisGerencial - MIN_TERM_GERENCIAL) * VALOR_EXTRA_TERMINAL);
+
+  if Assigned(chkFiscalGerencial) and chkFiscalGerencial.IsChecked     then Total := Total + 47.00;
+  if Assigned(chkFinanceiroGerencial) and chkFinanceiroGerencial.IsChecked then Total := Total + 27.00;
+  if Assigned(chkDreGerencial) and chkDreGerencial.IsChecked        then Total := Total + 27.00;
+  if Assigned(chkDashboardGerencial) and chkDashboardGerencial.IsChecked  then Total := Total + 27.00;
+  if Assigned(chkGerenceRep) and chkGerenceRep.IsChecked          then Total := Total + 47.00;
+
+  Result := Total;
+end;
+
+procedure TForm1.TabControl1Change(Sender: TObject);
+begin
+  FValorDesconto := 0; // Reseta o desconto ao trocar de sistema (Segurança)
+  CalcularTudo;
+end;
+
+procedure TForm1.CalcularEvent(Sender: TObject);
+begin
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMaisClick(Sender: TObject);
+begin
+  Inc(FQtdTerminaisGastro);
+  if Assigned(lblQtdTerminais) then
+    lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMenosClick(Sender: TObject);
+begin
+  if FQtdTerminaisGastro > MIN_TERM_GASTRO then
+  begin
+    Dec(FQtdTerminaisGastro);
+    if Assigned(lblQtdTerminais) then
+      lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+    CalcularTudo;
+  end;
+end;
+
+procedure TForm1.btnMaisGerencialClick(Sender: TObject);
+begin
+  Inc(FQtdTerminaisGerencial);
+  if Assigned(lblQtdTerminaisGerencial) then
+    lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
+  CalcularTudo;
+end;
+
+procedure TForm1.btnMenosGerencialClick(Sender: TObject);
+begin
+  if FQtdTerminaisGerencial > MIN_TERM_GERENCIAL then
+  begin
+    Dec(FQtdTerminaisGerencial);
+    if Assigned(lblQtdTerminaisGerencial) then
+       lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
+    CalcularTudo;
+  end;
+end;
+
+end.

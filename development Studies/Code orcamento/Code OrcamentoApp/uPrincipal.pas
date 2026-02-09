@@ -13,7 +13,7 @@ type
     lblTotal: TLabel;
     TabControl1: TTabControl;
 
-    // NOMES IMPORTANTES (Confira no Design!)
+    // NOMES IMPORTANTES
     TabGastronomico: TTabItem;
     TabGerencial: TTabItem;
     VertScrollBoxGastro: TVertScrollBox;
@@ -34,8 +34,8 @@ type
     chkDeliveryDireto: TCheckBox;
 
     lblQtdTerminais: TLabel;
-    btnMenos: TRectangle; // Tem que ser o Retângulo!
-    btnMais: TRectangle;  // Tem que ser o Retângulo!
+    btnMenos: TRectangle;
+    btnMais: TRectangle;
 
     // --- COMPONENTES GERENCIAL ---
     chkFiscalGerencial: TCheckBox;
@@ -61,9 +61,13 @@ type
     procedure btnMaisGerencialClick(Sender: TObject);
     procedure btnMenosGerencialClick(Sender: TObject);
 
+    // NOVO: Clique no cabeçalho para dar desconto
+    procedure lblTotalClick(Sender: TObject);
+
   private
     FQtdTerminaisGastro: Integer;
     FQtdTerminaisGerencial: Integer;
+    FValorDesconto: Currency;
 
     procedure CalcularTudo;
     function CalcularGastronomico: Currency;
@@ -92,6 +96,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   FQtdTerminaisGastro := MIN_TERM_GASTRO;
   FQtdTerminaisGerencial := MIN_TERM_GERENCIAL;
+  FValorDesconto := 0; // Começa sem desconto
 
   if Assigned(lblQtdTerminais) then
     lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
@@ -99,7 +104,6 @@ begin
   if Assigned(lblQtdTerminaisGerencial) then
     lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
 
-  // Garante que a aba existe antes de ativar
   if Assigned(TabGastronomico) then
     TabControl1.ActiveTab := TabGastronomico;
 
@@ -108,16 +112,68 @@ end;
 
 procedure TForm1.CalcularTudo;
 var
-  TotalFinal: Currency;
+  SubTotal, TotalFinal: Currency;
 begin
-  // Verifica se estamos na aba Gerencial
+  // Calcula o valor cheio (SubTotal) dependendo da aba
   if (TabControl1.ActiveTab = TabGerencial) then
-    TotalFinal := CalcularGerencial
+    SubTotal := CalcularGerencial
   else
-    TotalFinal := CalcularGastronomico;
+    SubTotal := CalcularGastronomico;
 
+  // Abate o desconto global
+  TotalFinal := SubTotal - FValorDesconto;
+
+  // Segurança para não ficar negativo
+  if TotalFinal < 0 then TotalFinal := 0;
+
+  // Mostra na tela
   if Assigned(lblTotal) then
+  begin
     lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', TotalFinal);
+
+    // (Opcional) Se tiver desconto, mostrar aviso visual
+    if FValorDesconto > 0 then
+      lblTotal.Text := lblTotal.Text + ' *';
+  end;
+end;
+
+procedure TForm1.lblTotalClick(Sender: TObject);
+var
+  LForm: TFrmDesconto;
+  ValorAtualSemDesconto: Currency;
+begin
+  // Descobre quanto deu a conta antes do desconto
+  if TabControl1.ActiveTab = TabGerencial then
+    ValorAtualSemDesconto := CalcularGerencial
+  else
+    ValorAtualSemDesconto := CalcularGastronomico;
+
+  LForm := TFrmDesconto.Create(nil);
+  try
+    LForm.ValorOriginal := ValorAtualSemDesconto;
+
+    // Se já tinha desconto aplicado, preenche o campo para o usuário ver
+    if FValorDesconto > 0 then
+       LForm.edtDesconto.Text := FloatToStr(FValorDesconto);
+
+    LForm.ShowModal(procedure(ModalResult: TModalResult)
+    begin
+      if ModalResult = mrOk then
+      begin
+        // A lógica do form retorna o Valor FINAL.
+        // Valor Cheio - Valor Final Desejado
+        FValorDesconto := ValorAtualSemDesconto - LForm.ValorFinal;
+
+        CalcularTudo;
+      end;
+
+      // Destruição segura para Android
+      TThread.ForceQueue(nil, procedure begin LForm.DisposeOf; end);
+    end);
+
+  except
+    LForm.DisposeOf;
+  end;
 end;
 
 function TForm1.CalcularGastronomico: Currency;
@@ -132,16 +188,16 @@ begin
     Total := BASE_GASTRO + ((FQtdTerminaisGastro - MIN_TERM_GASTRO) * VALOR_EXTRA_TERMINAL);
 
   if Assigned(chkMesa) and chkMesa.IsChecked           then Total := Total + 17.00;
-  if Assigned(chkEntrega) and chkEntrega.IsChecked        then Total := Total + 17.00;
-  if Assigned(chkFiscal) and chkFiscal.IsChecked         then Total := Total + 47.00;
-  if Assigned(chkGerencePlus) and chkGerencePlus.IsChecked    then Total := Total + 47.00;
-  if Assigned(chkWhatsapp) and chkWhatsapp.IsChecked       then Total := Total + 47.00;
-  if Assigned(chkComeraqui) and chkComeraqui.IsChecked      then Total := Total + 47.00;
-  if Assigned(chkFinanceiro) and chkFinanceiro.IsChecked     then Total := Total + 27.00;
-  if Assigned(chkDre) and chkDre.IsChecked            then Total := Total + 27.00;
-  if Assigned(chkDashboard) and chkDashboard.IsChecked      then Total := Total + 27.00;
-  if Assigned(chkIfood) and chkIfood.IsChecked          then Total := Total + 27.00;
-  if Assigned(chkAiqfome) and chkAiqfome.IsChecked        then Total := Total + 27.00;
+  if Assigned(chkEntrega) and chkEntrega.IsChecked     then Total := Total + 17.00;
+  if Assigned(chkFiscal) and chkFiscal.IsChecked       then Total := Total + 47.00;
+  if Assigned(chkGerencePlus) and chkGerencePlus.IsChecked then Total := Total + 47.00;
+  if Assigned(chkWhatsapp) and chkWhatsapp.IsChecked   then Total := Total + 47.00;
+  if Assigned(chkComeraqui) and chkComeraqui.IsChecked then Total := Total + 47.00;
+  if Assigned(chkFinanceiro) and chkFinanceiro.IsChecked then Total := Total + 27.00;
+  if Assigned(chkDre) and chkDre.IsChecked             then Total := Total + 27.00;
+  if Assigned(chkDashboard) and chkDashboard.IsChecked then Total := Total + 27.00;
+  if Assigned(chkIfood) and chkIfood.IsChecked         then Total := Total + 27.00;
+  if Assigned(chkAiqfome) and chkAiqfome.IsChecked     then Total := Total + 27.00;
   if Assigned(chkDeliveryDireto) and chkDeliveryDireto.IsChecked then Total := Total + 17.00;
 
   Result := Total;
@@ -169,6 +225,7 @@ end;
 
 procedure TForm1.TabControl1Change(Sender: TObject);
 begin
+  FValorDesconto := 0; // Reseta o desconto ao trocar de sistema (Segurança)
   CalcularTudo;
 end;
 
