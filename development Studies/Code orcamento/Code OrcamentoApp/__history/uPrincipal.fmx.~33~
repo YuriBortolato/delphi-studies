@@ -1,0 +1,807 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 670
+  ClientWidth = 982
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 982.000000000000000000
+    Size.Height = 590.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 13
+    TabPosition = PlatformDefault
+    Sizes = (
+      982s
+      564s
+      982s
+      564s)
+    object TabGastronomico: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 95.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Gastron'#244'mico'
+      ExplicitSize.cx = 95.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object VertScrollBoxGastro: TVertScrollBox
+        Tag = 1
+        Align = Client
+        Size.Width = 982.000000000000000000
+        Size.Height = 564.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 966.000000000000000000
+        Viewport.Height = 564.000000000000000000
+        object Layout15: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+          object Layout16: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkMesa: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Mesa e Balc'#227'o'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout17: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 55.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 11
+          object Layout18: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkEntrega: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Entrega'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout19: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 110.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          object Layout20: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkFiscal: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Fiscal'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout21: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 165.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          object Layout22: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkGerencePlus: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Gerence Plus'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout23: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 220.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          object Layout24: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkWhatsapp: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Whatsapp'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout25: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 275.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          object Layout26: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkComeraqui: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Comeraqui'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout27: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 330.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          object Layout28: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkFinanceiro: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Financeiro'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout29: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 385.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object Layout30: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkDre: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'DRE'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout31: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 440.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object Layout32: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkDashboard: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Dashboard'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout33: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 495.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object Layout34: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkIfood: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Ifood'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout35: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 550.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Layout36: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkAiqfome: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Aiqfome'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout37: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 605.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Layout38: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkDeliveryDireto: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Delivery Direto'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout41: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 660.000000000000000000
+          Size.Width = 966.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout42: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Layout1: TLayout
+              Align = Left
+              Size.Width = 153.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object btnMenos: TRectangle
+                Align = Left
+                Fill.Color = claGray
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 35.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+                OnClick = btnMenosClick
+                object lblSinalMenos: TLabel
+                  Align = Center
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 28.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.HorzAlign = Center
+                  Text = '-'
+                  TabOrder = 0
+                end
+              end
+              object btnMais: TRectangle
+                Align = Right
+                Fill.Color = claCornflowerblue
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 113.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 35.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+                OnClick = btnMaisClick
+                object lblSinalMais: TLabel
+                  Align = Center
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 27.000000000000000000
+                  Size.Height = 28.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.HorzAlign = Center
+                  Text = '+'
+                  TabOrder = 0
+                end
+              end
+              object lblQtdTerminais: TLabel
+                Align = Center
+                StyledSettings = [Family, FontColor]
+                Size.Width = 51.000000000000000000
+                Size.Height = 46.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 16.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = '3'
+                TabOrder = 2
+              end
+            end
+            object Layout2: TLayout
+              Align = Right
+              Position.X = 151.000000000000000000
+              Size.Width = 161.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object Label7: TLabel
+                Align = Center
+                StyledSettings = [Family, FontColor]
+                Size.Width = 173.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = 'TERMINAL'
+                TabOrder = 2
+              end
+            end
+          end
+        end
+      end
+    end
+    object TabGerencial: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 70.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Gerencial'
+      ExplicitSize.cx = 70.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object VertScrollBoxGerencial: TVertScrollBox
+        Tag = 1
+        Align = Client
+        Size.Width = 982.000000000000000000
+        Size.Height = 564.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 982.000000000000000000
+        Viewport.Height = 564.000000000000000000
+        object Layout3: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object LayoutFiscal: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkFiscalGerencial: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Fiscal'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout7: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 55.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object LayoutFinanceiro: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkFinanceiroGerencial: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Financeiro'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout8: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 110.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object LayoutDre: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkDreGerencial: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'DRE'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout9: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 165.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object LayoutDashboard: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkDashboardGerencial: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Dashboard'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout13: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 220.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object LayoutGerenceRep: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object chkGerenceRep: TCheckBox
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Scale.X = 1.500000000000000000
+              Scale.Y = 1.500000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Gerence Rep'
+              TextSettings.Font.Size = 14.000000000000000000
+              OnChange = CalcularEvent
+            end
+          end
+        end
+        object Layout4: TLayout
+          Align = Top
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 275.000000000000000000
+          Size.Width = 982.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout5: TLayout
+            Align = Center
+            Size.Width = 312.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Layout6: TLayout
+              Align = Left
+              Size.Width = 153.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object btnMenosGerencial: TRectangle
+                Align = Left
+                Fill.Color = claGray
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 35.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+                OnClick = btnMenosClick
+                object lblSinalMenosGerencial: TLabel
+                  Align = Center
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 28.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.HorzAlign = Center
+                  Text = '-'
+                  TabOrder = 0
+                end
+              end
+              object btnMaisGerencial: TRectangle
+                Align = Right
+                Fill.Color = claCornflowerblue
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 113.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 35.000000000000000000
+                Size.Height = 35.000000000000000000
+                Size.PlatformDefault = False
+                XRadius = 5.000000000000000000
+                YRadius = 5.000000000000000000
+                OnClick = btnMaisClick
+                object lblSinalMaisGerencial: TLabel
+                  Align = Center
+                  StyledSettings = [Family, FontColor]
+                  Size.Width = 27.000000000000000000
+                  Size.Height = 28.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.HorzAlign = Center
+                  Text = '+'
+                  TabOrder = 0
+                end
+              end
+              object lblQtdTerminaisGerencial: TLabel
+                Align = Center
+                StyledSettings = [Family, FontColor]
+                Size.Width = 51.000000000000000000
+                Size.Height = 46.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 16.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = '3'
+                TabOrder = 2
+              end
+            end
+            object Layout10: TLayout
+              Align = Right
+              Position.X = 151.000000000000000000
+              Size.Width = 161.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object Label4: TLabel
+                Align = Center
+                StyledSettings = [Family, FontColor]
+                Size.Width = 173.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = 'TERMINAL'
+                TabOrder = 2
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = claRoyalblue
+    Size.Width = 982.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    OnClick = lblTotalClick
+    object lblTotal: TLabel
+      Align = Center
+      StyledSettings = [Family]
+      Size.Width = 152.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'R$ 127,00 | Mes'
+      TabOrder = 0
+      OnClick = lblTotalClick
+    end
+  end
+end

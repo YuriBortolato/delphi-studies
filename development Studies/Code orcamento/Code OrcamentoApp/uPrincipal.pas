@@ -61,7 +61,7 @@ type
     procedure btnMaisGerencialClick(Sender: TObject);
     procedure btnMenosGerencialClick(Sender: TObject);
 
-    // NOVO: Clique no cabeçalho para dar desconto
+    // Clique no cabeçalho para dar desconto
     procedure lblTotalClick(Sender: TObject);
 
   private
@@ -92,29 +92,35 @@ const
 
   VALOR_EXTRA_TERMINAL = 17.00;
 
+// INICIALIZAÇÃO SEGURA
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  FQtdTerminaisGastro := MIN_TERM_GASTRO;
-  FQtdTerminaisGerencial := MIN_TERM_GERENCIAL;
-  FValorDesconto := 0; // Começa sem desconto
+  // 1. Define os valores iniciais na memória
+  FQtdTerminaisGastro := MIN_TERM_GASTRO;       // Começa com 3
+  FQtdTerminaisGerencial := MIN_TERM_GERENCIAL; // Começa com 1
+  FValorDesconto := 0;                          // Começa sem desconto
 
+  // 2. Atualiza o visual dos botões de terminais
   if Assigned(lblQtdTerminais) then
     lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
 
   if Assigned(lblQtdTerminaisGerencial) then
     lblQtdTerminaisGerencial.Text := FQtdTerminaisGerencial.ToString;
 
+  // 3. Força a aba inicial correta
   if Assigned(TabGastronomico) then
     TabControl1.ActiveTab := TabGastronomico;
 
+  // 4. Executa o primeiro cálculo para exibir R$ 127,00 logo de cara
   CalcularTudo;
 end;
 
+// LÓGICA DE CÁLCULO GERAL
 procedure TForm1.CalcularTudo;
 var
   SubTotal, TotalFinal: Currency;
 begin
-  // Calcula o valor cheio (SubTotal) dependendo da aba
+  // Calcula o valor cheio (SubTotal) dependendo da aba ativa
   if (TabControl1.ActiveTab = TabGerencial) then
     SubTotal := CalcularGerencial
   else
@@ -131,12 +137,14 @@ begin
   begin
     lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', TotalFinal);
 
-    // (Opcional) Se tiver desconto, mostrar aviso visual
+    // Se tiver desconto, mostrar aviso visual discreto
     if FValorDesconto > 0 then
       lblTotal.Text := lblTotal.Text + ' *';
   end;
 end;
 
+
+// FUNÇÃO DE DESCONTO
 procedure TForm1.lblTotalClick(Sender: TObject);
 var
   LForm: TFrmDesconto;
@@ -160,14 +168,14 @@ begin
     begin
       if ModalResult = mrOk then
       begin
-        // A lógica do form retorna o Valor FINAL.
+        // A lógica do form retorna o Valor FINAL desejado.
         // Valor Cheio - Valor Final Desejado
         FValorDesconto := ValorAtualSemDesconto - LForm.ValorFinal;
 
         CalcularTudo;
       end;
 
-      // Destruição segura para Android
+      // Destruição segura para evitar travamento no Android
       TThread.ForceQueue(nil, procedure begin LForm.DisposeOf; end);
     end);
 
@@ -176,6 +184,7 @@ begin
   end;
 end;
 
+// CÁLCULOS ESPECÍFICOS DE CADA ABA
 function TForm1.CalcularGastronomico: Currency;
 var
   Total: Currency;
@@ -223,6 +232,8 @@ begin
   Result := Total;
 end;
 
+// EVENTOS E BOTÕES
+
 procedure TForm1.TabControl1Change(Sender: TObject);
 begin
   FValorDesconto := 0; // Reseta o desconto ao trocar de sistema (Segurança)
@@ -234,6 +245,7 @@ begin
   CalcularTudo;
 end;
 
+// Botões Gastro
 procedure TForm1.btnMaisClick(Sender: TObject);
 begin
   Inc(FQtdTerminaisGastro);
@@ -253,6 +265,7 @@ begin
   end;
 end;
 
+// Botões Gerencial
 procedure TForm1.btnMaisGerencialClick(Sender: TObject);
 begin
   Inc(FQtdTerminaisGerencial);

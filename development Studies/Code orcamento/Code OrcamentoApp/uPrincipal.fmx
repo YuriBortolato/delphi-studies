@@ -1,9 +1,10 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  ActiveControl = TabGerencial
   Caption = 'Form1'
   ClientHeight = 670
-  ClientWidth = 982
+  ClientWidth = 984
   WindowState = wsMaximized
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -12,23 +13,24 @@ object Form1: TForm1
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Client
-    Size.Width = 982.000000000000000000
+    Size.Width = 984.000000000000000000
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 13
     TabPosition = PlatformDefault
+    OnChange = TabControl1Change
     Sizes = (
-      982s
+      984s
       564s
-      982s
+      984s
       564s)
     object TabGastronomico: TTabItem
       CustomIcon = <
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 95.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -40,16 +42,16 @@ object Form1: TForm1
       object VertScrollBoxGastro: TVertScrollBox
         Tag = 1
         Align = Client
-        Size.Width = 982.000000000000000000
+        Size.Width = 984.000000000000000000
         Size.Height = 564.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 966.000000000000000000
+        Viewport.Width = 968.000000000000000000
         Viewport.Height = 564.000000000000000000
         object Layout15: TLayout
           Align = Top
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 12
@@ -78,7 +80,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 55.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 11
@@ -107,7 +109,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 110.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 10
@@ -136,7 +138,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 165.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 9
@@ -165,7 +167,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 220.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 8
@@ -194,7 +196,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 275.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 7
@@ -223,7 +225,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 330.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
@@ -252,7 +254,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 385.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -281,7 +283,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 440.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -310,7 +312,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 495.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -339,7 +341,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 550.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -368,7 +370,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 605.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -397,7 +399,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 660.000000000000000000
-          Size.Width = 966.000000000000000000
+          Size.Width = 968.000000000000000000
           Size.Height = 60.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -509,7 +511,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 70.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -521,16 +523,16 @@ object Form1: TForm1
       object VertScrollBoxGerencial: TVertScrollBox
         Tag = 1
         Align = Client
-        Size.Width = 982.000000000000000000
+        Size.Width = 984.000000000000000000
         Size.Height = 564.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 982.000000000000000000
+        Viewport.Width = 984.000000000000000000
         Viewport.Height = 564.000000000000000000
         object Layout3: TLayout
           Align = Top
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -559,7 +561,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 55.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -588,7 +590,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 110.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -617,7 +619,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 165.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -646,7 +648,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 220.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -675,7 +677,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 275.000000000000000000
-          Size.Width = 982.000000000000000000
+          Size.Width = 984.000000000000000000
           Size.Height = 60.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -705,7 +707,7 @@ object Form1: TForm1
                 Size.PlatformDefault = False
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
-                OnClick = btnMenosClick
+                OnClick = btnMenosGerencialClick
                 object lblSinalMenosGerencial: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
@@ -733,7 +735,7 @@ object Form1: TForm1
                 Size.PlatformDefault = False
                 XRadius = 5.000000000000000000
                 YRadius = 5.000000000000000000
-                OnClick = btnMaisClick
+                OnClick = btnMaisGerencialClick
                 object lblSinalMaisGerencial: TLabel
                   Align = Center
                   StyledSettings = [Family, FontColor]
@@ -755,7 +757,7 @@ object Form1: TForm1
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 16.000000000000000000
                 TextSettings.HorzAlign = Center
-                Text = '3'
+                Text = '1'
                 TabOrder = 2
               end
             end
@@ -786,19 +788,20 @@ object Form1: TForm1
   object Rectangle1: TRectangle
     Align = Top
     Fill.Color = claRoyalblue
-    Size.Width = 982.000000000000000000
+    Size.Width = 984.000000000000000000
     Size.Height = 80.000000000000000000
     Size.PlatformDefault = False
     OnClick = lblTotalClick
     object lblTotal: TLabel
-      Align = Center
+      Align = Client
       StyledSettings = [Family]
-      Size.Width = 152.000000000000000000
-      Size.Height = 17.000000000000000000
+      Size.Width = 984.000000000000000000
+      Size.Height = 80.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 20.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
       Text = 'R$ 127,00 | Mes'
       TabOrder = 0
       OnClick = lblTotalClick
