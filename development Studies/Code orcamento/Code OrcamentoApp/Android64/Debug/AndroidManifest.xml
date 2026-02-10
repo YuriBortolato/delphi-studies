@@ -23,7 +23,7 @@
     <application
         android:persistent="False"
         android:restoreAnyVersion="False"
-        android:label="Project1"
+        android:label="Orçamento"
         android:debuggable="true"
         android:largeHeap="False"
         android:icon="@drawable/ic_launcher"
@@ -52,7 +52,7 @@
         <activity
             android:name="com.embarcadero.firemonkey.FMXNativeActivity"
             android:exported="true"
-            android:label="Project1"
+            android:label="Orçamento"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout|uiMode"
             android:launchMode="singleTask">
             <!-- Tell NativeActivity the name of our .so -->
