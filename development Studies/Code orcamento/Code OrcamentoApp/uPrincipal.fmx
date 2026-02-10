@@ -16,7 +16,7 @@ object Form1: TForm1
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 13
     TabPosition = PlatformDefault
     OnChange = TabControl1Change
@@ -30,7 +30,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 492.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -493,7 +493,7 @@ object Form1: TForm1
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 16.000000000000000000
                 TextSettings.HorzAlign = Center
-                Text = '3'
+                Text = '1'
                 TabOrder = 2
               end
             end
@@ -527,7 +527,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 492.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -817,35 +817,52 @@ object Form1: TForm1
     Size.Height = 80.000000000000000000
     Size.PlatformDefault = False
     OnClick = lblTotalClick
-    object lblTotal: TLabel
-      Align = Bottom
-      StyledSettings = [Family]
-      Position.Y = 32.000000000000000000
-      Scale.X = 1.200000047683716000
-      Scale.Y = 1.200000047683716000
-      Size.Width = 820.000000000000000000
-      Size.Height = 40.000000000000000000
+    object Layout11: TLayout
+      Align = Client
+      Size.Width = 984.000000000000000000
+      Size.Height = 80.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 20.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      TextSettings.HorzAlign = Center
-      Text = 'R$ 127,00 | Mes'
       TabOrder = 0
       OnClick = lblTotalClick
-    end
-    object lblPrecoAntigo: TLabel
-      Align = Top
-      StyledSettings = [Family, Size]
-      Size.Width = 984.000000000000000000
-      Size.Height = 35.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.StyleExt = {08040000000000000004000000}
-      TextSettings.FontColor = claMintcream
-      TextSettings.HorzAlign = Center
-      Text = 'De R$ 0,00 por'
-      Visible = False
-      TabOrder = 1
+      object Layout12: TLayout
+        Align = Center
+        Size.Width = 250.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblPrecoAntigo: TLabel
+          Align = Top
+          StyledSettings = [Family, Size]
+          Margins.Left = 10.000000000000000000
+          Position.X = 12.000000000000000000
+          Scale.X = 1.200000047683716000
+          Scale.Y = 1.200000047683716000
+          Size.Width = 198.333328247070300000
+          Size.Height = 50.000003814697270000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claMintcream
+          Text = 'De R$ 0,00 por'
+          TabOrder = 1
+        end
+        object lblTotal: TLabel
+          Align = Bottom
+          StyledSettings = [Family]
+          Position.Y = 34.000000000000000000
+          Scale.X = 1.399999976158142000
+          Scale.Y = 1.399999976158142000
+          Size.Width = 178.571426391601600000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'R$ 127,00 | Mes'
+          TabOrder = 0
+          OnClick = lblTotalClick
+        end
+      end
     end
   end
 end

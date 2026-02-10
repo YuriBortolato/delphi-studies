@@ -50,6 +50,8 @@ type
 
     // Label do preço antigo
     lblPrecoAntigo: TLabel;
+    Layout11: TLayout;
+    Layout12: TLayout;
 
     // Eventos
     procedure FormCreate(Sender: TObject);
@@ -153,7 +155,7 @@ begin
     lblTotal.Text := FormatFloat('R$ #,##0.00 | mês', TotalFinal);
   end;
 
-  // Lógica do Label "Preço Antigo" (Riscado)
+  // Lógica do Label "Preço Antigo"
   if Assigned(lblPrecoAntigo) then
   begin
     if FValorDesconto > 0 then
@@ -167,7 +169,7 @@ begin
     end
     else
     begin
-      // Não tem desconto? Esconde.
+      // Não tem desconto Esconde.
       lblPrecoAntigo.Visible := False;
     end;
   end;
@@ -181,7 +183,7 @@ var
 begin
   Total := 0;
 
-  // Regra: Cobra o base. Se tiver terminais EXTRAS (além do mínimo), cobra +17 cada.
+  // Cobra o base, terminais EXTRAS +17 cada.
   if FQtdTerminaisGastro <= MIN_TERM_GASTRO then
     Total := BASE_GASTRO
   else
