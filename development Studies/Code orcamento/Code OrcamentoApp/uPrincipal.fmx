@@ -9,6 +9,7 @@ object Form1: TForm1
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnShow = FormShow
   DesignerMasterStyle = 3
   object TabControl1: TTabControl
     Align = Client
@@ -16,7 +17,7 @@ object Form1: TForm1
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 13
     TabPosition = PlatformDefault
     OnChange = TabControl1Change
@@ -30,7 +31,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 492.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -515,7 +516,7 @@ object Form1: TForm1
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 492.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False

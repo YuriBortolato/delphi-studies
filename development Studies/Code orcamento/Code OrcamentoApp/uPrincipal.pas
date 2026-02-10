@@ -68,6 +68,7 @@ type
 
     // Clique no cabeçalho
     procedure lblTotalClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
 
   private
     FQtdTerminaisGastro: Integer;
@@ -131,6 +132,14 @@ begin
   CalcularTudo;
 end;
 
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  if Assigned(lblQtdTerminais) then
+    lblQtdTerminais.Text := FQtdTerminaisGastro.ToString;
+
+  CalcularTudo;
+end;
 
 // CÁLCULO GERAL E VISUAL "DE / POR"
 procedure TForm1.CalcularTudo;

@@ -9,29 +9,30 @@ object Form1: TForm1
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  DesignerMasterStyle = 0
+  DesignerMasterStyle = 3
   object TabControl1: TTabControl
     Align = Client
     Size.Width = 984.000000000000000000
     Size.Height = 590.000000000000000000
     Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
     TabIndex = 0
     TabOrder = 13
     TabPosition = PlatformDefault
     OnChange = TabControl1Change
     Sizes = (
       984s
-      564s
+      541s
       984s
-      564s)
+      541s)
     object TabGastronomico: TTabItem
       CustomIcon = <
         item
         end>
       TextSettings.Trimming = None
       IsSelected = True
-      Size.Width = 95.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Width = 492.000000000000000000
+      Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -42,15 +43,15 @@ object Form1: TForm1
         Tag = 1
         Align = Client
         Size.Width = 984.000000000000000000
-        Size.Height = 564.000000000000000000
+        Size.Height = 541.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 968.000000000000000000
-        Viewport.Height = 564.000000000000000000
+        Viewport.Width = 979.000000000000000000
+        Viewport.Height = 541.000000000000000000
         object Layout15: TLayout
           Align = Top
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 12
@@ -65,7 +66,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -79,7 +80,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 55.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 11
@@ -94,7 +95,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -108,7 +109,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 110.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 10
@@ -123,7 +124,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -137,7 +138,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 165.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 9
@@ -152,7 +153,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -166,7 +167,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 220.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 8
@@ -181,7 +182,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -195,7 +196,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 275.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 7
@@ -210,7 +211,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -224,7 +225,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 330.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
@@ -239,7 +240,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -253,7 +254,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 385.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -268,7 +269,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -282,7 +283,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 440.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -297,7 +298,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -311,7 +312,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 495.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -326,7 +327,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -340,7 +341,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 550.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -355,7 +356,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -369,7 +370,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 605.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -384,7 +385,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -398,7 +399,7 @@ object Form1: TForm1
           Align = Top
           Margins.Bottom = 5.000000000000000000
           Position.Y = 660.000000000000000000
-          Size.Width = 968.000000000000000000
+          Size.Width = 979.000000000000000000
           Size.Height = 60.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -480,7 +481,7 @@ object Form1: TForm1
                 Size.PlatformDefault = False
                 TextSettings.Font.Size = 16.000000000000000000
                 TextSettings.HorzAlign = Center
-                Text = '3'
+                Text = '1'
                 TabOrder = 2
               end
             end
@@ -515,8 +516,8 @@ object Form1: TForm1
         end>
       TextSettings.Trimming = None
       IsSelected = False
-      Size.Width = 70.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Width = 492.000000000000000000
+      Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -527,11 +528,11 @@ object Form1: TForm1
         Tag = 1
         Align = Client
         Size.Width = 984.000000000000000000
-        Size.Height = 564.000000000000000000
+        Size.Height = 541.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         Viewport.Width = 984.000000000000000000
-        Viewport.Height = 564.000000000000000000
+        Viewport.Height = 541.000000000000000000
         object Layout3: TLayout
           Align = Top
           Margins.Bottom = 5.000000000000000000
@@ -550,7 +551,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -579,7 +580,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -608,7 +609,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -637,7 +638,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -666,7 +667,7 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 105.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
@@ -799,21 +800,53 @@ object Form1: TForm1
     Size.Height = 80.000000000000000000
     Size.PlatformDefault = False
     OnClick = lblTotalClick
-    object lblTotal: TLabel
+    object Layout11: TLayout
       Align = Client
-      StyledSettings = [Family]
-      Scale.X = 1.200000047683716000
-      Scale.Y = 1.200000047683716000
-      Size.Width = 820.000000000000000000
-      Size.Height = 66.666664123535160000
+      Size.Width = 984.000000000000000000
+      Size.Height = 80.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 20.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      TextSettings.HorzAlign = Center
-      Text = 'R$ 127,00 | Mes'
       TabOrder = 0
       OnClick = lblTotalClick
+      object Layout12: TLayout
+        Align = Center
+        Size.Width = 250.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblPrecoAntigo: TLabel
+          Align = Top
+          StyledSettings = [Family, Size]
+          Margins.Left = 10.000000000000000000
+          Position.X = 12.000000000000000000
+          Scale.X = 1.200000047683716000
+          Scale.Y = 1.200000047683716000
+          Size.Width = 198.333328247070300000
+          Size.Height = 50.000003814697270000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {08040000000000000004000000}
+          TextSettings.FontColor = claMintcream
+          Text = 'De R$ 0,00 por'
+          Visible = False
+          TabOrder = 1
+        end
+        object lblTotal: TLabel
+          Align = Bottom
+          StyledSettings = [Family]
+          Position.Y = 34.000000000000000000
+          Scale.X = 1.399999976158142000
+          Scale.Y = 1.399999976158142000
+          Size.Width = 178.571426391601600000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'R$ 127,00 | Mes'
+          TabOrder = 0
+          OnClick = lblTotalClick
+        end
+      end
     end
   end
 end
