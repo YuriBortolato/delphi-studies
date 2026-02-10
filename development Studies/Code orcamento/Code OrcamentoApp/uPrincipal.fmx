@@ -66,13 +66,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Mesa e Balc'#227'o'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -96,13 +95,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Entrega'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -126,13 +124,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Fiscal'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -156,13 +153,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Gerence Plus'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -186,13 +182,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Whatsapp'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -216,13 +211,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Comeraqui'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -246,13 +240,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Financeiro'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -276,13 +269,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'DRE'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -306,13 +298,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Dashboard'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -336,13 +327,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Ifood'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -366,13 +356,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Aiqfome'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -396,13 +385,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Delivery Direto'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -563,13 +551,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Fiscal'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -593,13 +580,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Financeiro'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -623,13 +609,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'DRE'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -653,13 +638,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Dashboard'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
@@ -683,13 +667,12 @@ object Form1: TForm1
               StyledSettings = [Family, FontColor]
               Scale.X = 1.500000000000000000
               Scale.Y = 1.500000000000000000
-              Size.Width = 200.000000000000000000
+              Size.Width = 150.000000000000000000
               Size.Height = 30.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               Text = 'Gerence Rep'
               TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
               OnChange = CalcularEvent
             end
           end
