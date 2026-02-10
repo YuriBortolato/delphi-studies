@@ -826,6 +826,7 @@ object Form1: TForm1
           TextSettings.Font.StyleExt = {08040000000000000004000000}
           TextSettings.FontColor = claMintcream
           Text = 'De R$ 0,00 por'
+          Visible = False
           TabOrder = 1
         end
         object lblTotal: TLabel
